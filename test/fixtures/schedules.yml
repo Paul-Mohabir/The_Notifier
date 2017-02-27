@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: MyString
+  shift: MyString
+  employee: MyString
+
+two:
+  day: MyString
+  shift: MyString
+  employee: MyString
