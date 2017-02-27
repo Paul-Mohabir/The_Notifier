@@ -10,20 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227012713) do
-
-  create_table "employees", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "emergency_contact"
-    t.string   "position"
-    t.string   "shift_preference"
-    t.integer  "hours_worked"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
+ActiveRecord::Schema.define(version: 20170227191440) do
 
   create_table "notifications", force: :cascade do |t|
     t.string   "shift_cancelled"
@@ -46,6 +33,19 @@ ActiveRecord::Schema.define(version: 20170227012713) do
     t.string   "time_of_day"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "emergency_contact"
+    t.string   "position"
+    t.string   "shift_preference"
+    t.integer  "hours_worked"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end
