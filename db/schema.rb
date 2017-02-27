@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227191440) do
+ActiveRecord::Schema.define(version: 20170227194943) do
 
   create_table "notifications", force: :cascade do |t|
     t.string   "shift_cancelled"
@@ -44,8 +44,17 @@ ActiveRecord::Schema.define(version: 20170227191440) do
     t.string   "position"
     t.string   "shift_preference"
     t.integer  "hours_worked"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.string   "salt"
+    t.string   "crypted_password"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "remember_me_token"
+    t.datetime "remember_me_token_expires_at"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
+    t.index ["remember_me_token"], name: "index_users_on_remember_me_token"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end
 
 end

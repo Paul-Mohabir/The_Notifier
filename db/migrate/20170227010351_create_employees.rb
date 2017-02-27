@@ -9,6 +9,8 @@ class CreateEmployees < ActiveRecord::Migration[5.0]
       t.string :position
       t.string :shift_preference
       t.integer :hours_worked
+      t.string :salt
+      t.string :crypted_password  
 
       t.timestamps
     end
