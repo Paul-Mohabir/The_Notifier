@@ -23,6 +23,11 @@
  }
 
 /* HEADER STYLES: */
+
+header a, a:hover, a:visited {
+  text-decoration: none;
+  color: white;
+}
 /* FULLSCREEN: */
 
 #logo {
