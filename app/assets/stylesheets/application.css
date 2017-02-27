@@ -15,14 +15,57 @@
  *= require_self
  */
 
+ /* GLOBAL STYLES */
+
+ * {
+   box-sizing: border-box;
+   padding: 0;
+ }
+
 /* HEADER STYLES: */
 /* FULLSCREEN: */
 
-header {
+#logo {
+  position: fixed;
+  box-sizing: content-box;
+  top: 0px;
+  left: 0px;
+  padding: 10px 40px;
+  z-index: 100;
+
+  font-size: 1.25em;
+  line-height: 0px;
+  color: white;
+  background-color: #277a64;
+}
+
+/*-------------------------------*/
+
+.navbar {
   position: fixed;
   top: 0px;
-  left: 0px; 
+  right: 0px;
   width: 100%;
 
   background-color: #277a64;
+}
+
+.navbar ul {
+  float: right;
+  margin: auto;
+  margin-right: 30px;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 1em;
+
+  color: white;
+}
+
+/* SPACER STYLE*/
+
+#spacer {
+  margin: auto;
+  height: 30px;
 }
