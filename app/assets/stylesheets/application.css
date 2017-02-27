@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+/* HEADER STYLES: */
+/* FULLSCREEN: */
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%; 
+
+  background-color: #277a64;
+}
