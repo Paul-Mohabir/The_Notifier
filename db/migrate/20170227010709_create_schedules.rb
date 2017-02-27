@@ -3,7 +3,7 @@ class CreateSchedules < ActiveRecord::Migration[5.0]
     create_table :schedules do |t|
       t.string :day
       t.string :shift
-      t.string :employee
+      t.belongs_to :user
 
       t.timestamps
     end
