@@ -92,6 +92,17 @@ header a, a:hover, a:visited {
     height: 60px;
   }
 
+  .navbar ul {
+    margin: auto;
+    height: 100%;
+  }
+
+  .navbar ul li {
+    margin-top: 5px; 
+    margin-right: 20px;
+    font-size: 1.3em;
+  }
+
   #nav-fullscreen-link {
     display: none
   }
@@ -101,6 +112,7 @@ header a, a:hover, a:visited {
   }
 
   #nav-mobile-menu {
+
     display: inline-block;
   }
 }
