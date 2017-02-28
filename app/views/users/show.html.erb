@@ -20,8 +20,18 @@
   <%= @user.phone %>
 </p>
 
+<p>
+  <strong> Emergency Contact: </strong>
+  <%= @user.emergency_contact %>
+</p>
+
+<p>
+  <strong> Shift Preference </strong>
+  <%= @user.shift_preference %>
+</p>
+
 
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', user_path(@user) %>
