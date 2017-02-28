@@ -92,15 +92,15 @@ header a, a:hover, a:visited {
     height: 60px;
   }
 
-  .navbar ul {
-
-  }
-
-  .navbar li {
-
+  #nav-fullscreen-link {
+    display: none
   }
 
   #nav-name-display {
     display: none;
+  }
+
+  #nav-mobile-menu {
+    display: inline-block;
   }
 }
