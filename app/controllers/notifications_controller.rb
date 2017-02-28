@@ -2,9 +2,11 @@ class NotificationsController < ApplicationController
 
 
   def index
+    @notifications = Notification.all
   end
 
   def show
+    @notification = Notification.find(params[:id])
   end
 
   def new
@@ -13,10 +15,19 @@ class NotificationsController < ApplicationController
 
   def create
     @notification = Notification.new(notification_params)
+    if @notification.save
+      redirect_to notifications_path
+    else
+      render :new
+    end
+    # save something to the database
+    # do something to respond
   end
 
   def delete
-    @notification = Notification.delete
+    notification = Notification.find(params[:id])
+    # delete that notification
+    # do something to respond
   end
 
   private
