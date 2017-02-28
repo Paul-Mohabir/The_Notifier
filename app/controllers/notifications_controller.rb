@@ -22,7 +22,7 @@ class NotificationsController < ApplicationController
   private
 
   def notification_params
-    params.require(:user).permit(:shift_rescheduled, :shift_cancelled, :open_position)
+    params.require(:notification).permit(:open_position)
   end
-  
+
 end
