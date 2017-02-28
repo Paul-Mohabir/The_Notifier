@@ -1,0 +1,34 @@
+<%= form_for(@notification) do |f| %>
+  <% if @notification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(notification.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% notification.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="cancel_shift">
+    <%= f.label :shift_cancelled %>
+    <%= f.text_area :shift_cancelled %>
+  </div>
+
+
+  <div class="reschedule_shift">
+    <%= f.label :shift_rescheduled %>
+    <%= f.text_area :shift_rescheduled %>
+  </div>
+
+  <div class="reschedule_shift">
+    <%= f.label :open_position %>
+    <%= f.text_area :open_position %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

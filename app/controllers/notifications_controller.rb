@@ -1,5 +1,9 @@
 class NotificationsController < ApplicationController
 
+
+  def index
+  end
+
   def show
   end
 
@@ -19,5 +23,6 @@ class NotificationsController < ApplicationController
 
   def notification_params
     params.require(:user).permit(:shift_rescheduled, :shift_cancelled, :open_position)
-
+  end
+  
 end
