@@ -2,6 +2,7 @@ class NotificationsController < ApplicationController
 
 
   def index
+    @notifications = Notification.all
   end
 
   def show
@@ -13,6 +14,11 @@ class NotificationsController < ApplicationController
 
   def create
     @notification = Notification.new(notification_params)
+    if @notification.save
+      redirect_to notifications_path
+    else
+      render :new
+    end
   end
 
   def delete
