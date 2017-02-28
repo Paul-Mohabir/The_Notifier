@@ -6,6 +6,7 @@ class NotificationsController < ApplicationController
   end
 
   def show
+    @notification = Notification.find(params[:id])
   end
 
   def new
@@ -22,7 +23,9 @@ class NotificationsController < ApplicationController
   end
 
   def delete
-    @notification = Notification.delete
+    notification = Notification.find(params[:id])
+    # delete that notification
+    # do something to respond
   end
 
   private
