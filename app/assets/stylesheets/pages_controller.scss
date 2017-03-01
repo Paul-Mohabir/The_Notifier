@@ -18,7 +18,7 @@
 
 .button-box span {
   width: 100px;
-  
+
   font-family: 'Roboto Slab', serif;
   font-size: 1.5em;
   background-color: grey;
@@ -33,13 +33,28 @@
 
 @media(max-width: 425px) {
 
+  .splash-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: DimGrey; 
+  }
+
   .blurb-box {
-    margin: 20px 0px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 5px;
     background-color: green;
   }
 
   .button-box {
+    width: 60%;
+    height: 28px;
+    margin: auto;
+    margin-bottom: 20px;
+
     text-align: center;
   }
 
@@ -55,5 +70,21 @@
   .button-box span:last-child {
     float: right;
   }
+
+  // .info-container {
+  //   position: absolute;
+  //   left: 0px;
+  //   width: 100%;
+  //
+  //   background-color: teal;
+  // }
+  //
+  // #info-header {
+  //   text-align: center;
+  //
+  //   font-family: 'Roboto Slab';
+  //   font-size: 2em;
+  //   color: white;
+  // }
 
 }
