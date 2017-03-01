@@ -93,6 +93,8 @@ header a, a:hover, a:visited {
   }
 
   .navbar {
+    position: fixed;
+    z-index: 99;
     height: 60px;
   }
 

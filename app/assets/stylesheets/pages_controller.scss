@@ -33,11 +33,16 @@
 
 @media(max-width: 425px) {
 
-  .splash-container {
+  .page-container {
     position: absolute;
     left: 0;
     width: 100%;
-    background-color: DimGrey; 
+    background-color: DimGrey;
+  }
+
+  .splash-container {
+    padding: 10px 0px;
+    background-color: white;
   }
 
   .blurb-box {
@@ -71,20 +76,30 @@
     float: right;
   }
 
-  // .info-container {
-  //   position: absolute;
-  //   left: 0px;
-  //   width: 100%;
-  //
-  //   background-color: teal;
-  // }
-  //
-  // #info-header {
-  //   text-align: center;
-  //
-  //   font-family: 'Roboto Slab';
-  //   font-size: 2em;
-  //   color: white;
-  // }
+  .info-container {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    padding: 10px;
+
+    background-color: teal;
+  }
+
+  #info-header {
+    text-align: center;
+
+    font-family: 'Roboto Slab';
+    font-size: 2em;
+    color: white;
+  }
+
+  .info-box {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .info-box:nth-child(2n+0) {
+    background-color: white; 
+  }
 
 }
