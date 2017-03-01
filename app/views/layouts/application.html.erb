@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Raleway:500|Roboto+Slab" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
@@ -25,7 +26,7 @@
           <li id="nav-fullscreen-link"> <%= link_to 'My Notifications', notifications_url %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'Logout', :logout, method: :post %></li>
           <li id="nav-name-display"> <%= current_user.name %> </li>
-          <li id="nav-mobile-menu"> Menu </li>
+          <li id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </li>
         </ul>
       <% else %>
         <ul>

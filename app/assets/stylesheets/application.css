@@ -71,6 +71,10 @@ header a, a:hover, a:visited {
   color: white;
 }
 
+#nav-mobile-menu {
+  display: none;
+}
+
 /* SPACER STYLE*/
 
 #spacer {
@@ -80,7 +84,7 @@ header a, a:hover, a:visited {
 
 /* MOBILE */
 
-@media(max-width: 415px) {
+@media(max-width: 425px) {
 
   #logo {
     font-size: 1.25em;
@@ -98,7 +102,7 @@ header a, a:hover, a:visited {
   }
 
   .navbar ul li {
-    margin-top: 5px; 
+    margin-top: 5px;
     margin-right: 20px;
     font-size: 1.3em;
   }
@@ -112,7 +116,13 @@ header a, a:hover, a:visited {
   }
 
   #nav-mobile-menu {
-
     display: inline-block;
+    margin-top: 5px;
+    margin-right: 0px;
+    padding: 0px 20px;
+  }
+
+  .material-icons.md-48 {
+    font-size: 48px;
   }
 }
