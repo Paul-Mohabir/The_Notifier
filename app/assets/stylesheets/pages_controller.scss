@@ -1,3 +1,59 @@
 // Place all the styles related to the PagesController controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blurb-box {
+  background-color: grey;
+}
+
+.blurb-box h1 {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+
+.blurb-box p {
+  font-family: 'Raleway', serif;
+  font-size: 1.5em;
+}
+
+.button-box span {
+  width: 100px;
+  
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5em;
+  background-color: grey;
+}
+
+.button-box a, a:hover, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+// MOBILE
+
+@media(max-width: 425px) {
+
+  .blurb-box {
+    margin: 20px 0px;
+    padding: 5px;
+    background-color: green;
+  }
+
+  .button-box {
+    text-align: center;
+  }
+
+  .button-box span {
+    padding: 5px 10px;
+    background-color: grey;
+  }
+
+  .button-box span:first-child {
+    float: left;
+  }
+
+  .button-box span:last-child {
+    float: right;
+  }
+
+}
