@@ -53,6 +53,7 @@ header a, a:hover, a:visited {
   top: 0px;
   right: 0px;
   width: 100%;
+  z-index: 99;
 
   background-color: #277a64;
 }
@@ -73,6 +74,12 @@ header a, a:hover, a:visited {
 
 #nav-mobile-menu {
   display: none;
+  z-index: 100;
+  color: white;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
 }
 
 /* SPACER STYLE*/
@@ -94,19 +101,7 @@ header a, a:hover, a:visited {
 
   .navbar {
     position: fixed;
-    z-index: 99;
     height: 60px;
-  }
-
-  .navbar ul {
-    margin: auto;
-    height: 100%;
-  }
-
-  .navbar ul li {
-    margin-top: 5px;
-    margin-right: 20px;
-    font-size: 1.3em;
   }
 
   #nav-fullscreen-link {
@@ -119,12 +114,49 @@ header a, a:hover, a:visited {
 
   #nav-mobile-menu {
     display: inline-block;
-    margin-top: 5px;
-    margin-right: 0px;
-    padding: 0px 20px;
+    float: right;
+    height: 60px;
+    padding: 5px 20px;
   }
 
-  .material-icons.md-48 {
-    font-size: 48px;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) and (min-width: 426px) {
+
+  #logo {
+    height: 50px;
+    padding-top: 7px;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar ul {
+    text-align: center;
+    float: right;
+    height: 70px;
+    margin-right: 0px;
+  }
+
+  .navbar ul li {
+    float: right;
+    padding: 25px 0px;
+  }
+
+  #nav-fullscreen-link {
+    display: none;
+  }
+
+  #nav-name-display {
+    font-size: 1.5em;
+  }
+
+  #nav-mobile-menu {
+    display: inline-block;
+    float: right;
+    padding: 9px 20px;
   }
 }

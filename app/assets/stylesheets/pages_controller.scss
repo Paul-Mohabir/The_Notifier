@@ -99,7 +99,13 @@
   }
 
   .info-box:nth-child(2n+0) {
-    background-color: white; 
+    background-color: white;
   }
 
+}
+
+// iPHONE 5
+
+.button-box span {
+  width: 95px;
 }

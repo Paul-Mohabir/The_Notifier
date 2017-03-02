@@ -22,13 +22,19 @@
 
     <div class="navbar">
       <% if current_user %>
+
+        <span id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </span>
+
         <ul>
           <li id="nav-fullscreen-link"> <%= link_to 'My Notifications', notifications_url %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'Logout', :logout, method: :post %></li>
           <li id="nav-name-display"> <%= current_user.name %> </li>
-          <li id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </li>
         </ul>
+
       <% else %>
+
+        <span id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </span>
+
         <ul>
           <li> <%= link_to 'Login', :login %></li>
           <li> <%= link_to 'Register', new_user_path %> </li>
