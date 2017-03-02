@@ -85,13 +85,22 @@ header a, a:hover, a:visited {
 /* SPACER STYLE*/
 
 #spacer {
+  position: absolute;
+  overflow: hidden;
   margin: auto;
-  height: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
 }
 
 /* MOBILE */
 
 @media(max-width: 425px) {
+
+  #spacer {
+    height: 60px;
+  }
 
   #logo {
     font-size: 1.25em;
@@ -124,6 +133,10 @@ header a, a:hover, a:visited {
 /* TABLET */
 
 @media (max-width: 768px) and (min-width: 426px) {
+
+  #spacer{
+    height: 70px; 
+  }
 
   #logo {
     height: 50px;

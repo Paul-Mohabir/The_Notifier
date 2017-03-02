@@ -35,9 +35,10 @@
 
   .page-container {
     position: absolute;
+    top: 60px;
     left: 0;
     width: 100%;
-    background-color: DimGrey;
+    background-color: white;
   }
 
   .splash-container {
@@ -99,7 +100,7 @@
   }
 
   .info-box:nth-child(2n+0) {
-    background-color: white;
+    background-color: magenta;
   }
 
 }
@@ -108,4 +109,53 @@
 
 .button-box span {
   width: 95px;
+}
+
+// TABLET
+
+@media(max-width: 768px) and (min-width: 426px){
+
+  .page-container {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+  }
+
+  .splash-container {
+    margin: auto;
+    width: 60%;
+    padding: 30px 0px;
+  }
+
+  .blurb-box {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .button-box {
+    margin: auto;
+    width: 40%;
+    margin-top: 20px;
+
+    text-align: center;
+  }
+
+  .info-container {
+    display: none;
+  }
+
+  .info-box {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .info-box:nth-child(2n+1) {
+    background-color: cyan;
+  }
+
+  .info-box:nth-child(2n+0) {
+    background-color: magenta;
+  }
+
 }
