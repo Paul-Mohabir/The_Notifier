@@ -14,18 +14,15 @@
 .landing {
   padding: 60px 0px;
   width: 100%;
-  background-color: teal; 
+  background-color: teal;
 }
 
 .splash-container {
-  height: 500px;
   margin: auto;
   width: 75%;
 }
 
 .blurb-box {
-  display: inline-block;
-  float: left;
   padding: 20px;
   background-color: grey;
 }
@@ -40,10 +37,10 @@
   font-size: 1.5em;
 }
 
-.button-box {
-  display: inline-block;
-  float: right;
-}
+// .button-box {
+//   display: inline-block;
+//   float: right;
+// }
 
 .button-box span {
   width: 100px;
@@ -68,6 +65,10 @@
     left: 0;
     width: 100%;
     background-color: white;
+  }
+
+  .landing {
+    padding: 0; 
   }
 
   .splash-container {
