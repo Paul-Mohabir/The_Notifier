@@ -1,3 +1,3 @@
 class Notification < ApplicationRecord
-  belongs_to :User  
+  belongs_to :User, :Shift
 end
