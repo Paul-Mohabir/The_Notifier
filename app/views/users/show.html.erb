@@ -1,37 +1,39 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name: </strong>
-  <%= @user.name %>
-</p>
+<div class="page-container">
 
-<p>
-  <strong>Email: </strong>
-  <%= @user.email %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Address: </strong>
-  <%= @user.address %>
-</p>
+    <p>
+      <strong>Name: </strong>
+      <%= @user.name %>
+    </p>
 
-<p>
-  <strong>Phone Number: </strong>
-  <%= @user.phone %>
-</p>
+    <p>
+      <strong>Email: </strong>
+      <%= @user.email %>
+    </p>
 
-<p>
-  <strong> Emergency Contact: </strong>
-  <%= @user.emergency_contact %>
-</p>
+    <p>
+      <strong>Address: </strong>
+      <%= @user.address %>
+    </p>
 
-<p>
-  <strong> Shift Preference </strong>
-  <%= @user.shift_preference %>
-</p>
+    <p>
+      <strong>Phone Number: </strong>
+      <%= @user.phone %>
+    </p>
 
+    <p>
+      <strong> Emergency Contact: </strong>
+      <%= @user.emergency_contact %>
+    </p>
 
+    <p>
+      <strong> Shift Preference </strong>
+      <%= @user.shift_preference %>
+    </p>
 
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', user_path(@user) %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', user_path(@user) %>
+</div> 
