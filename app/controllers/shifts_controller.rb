@@ -1,16 +1,26 @@
 class ShiftsController < ApplicationController
 
-  def show
+  def new
+    @shift =Shift.new
+  end
+
+  def create
+    @shift = Shift.new(shift_params)
+    if @shift.save
+      redirect_to shifts_path
+    else
+      render :new
+    end
   end
 
   def time_of_day
-    if hour = '8'
+    if starting = '8'
       @time_of_day = 'Morning Shift'
     elsif
-      hour = '16'
+      starting = '16'
       @time_of_day = 'Afternoon Shift'
     else
-      hour = '0'
+      starting = '0'
       @time_of_day = 'Night Shift'
   end
 end
