@@ -1,6 +1,11 @@
 class SchedulesController < ApplicationController
 
+
+  def show
+  end
+
   def monday
+
   end
 
   def tuesday
