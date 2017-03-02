@@ -2,7 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// DESKTOP
+
+.page-container {
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  width: 100%;
+}
+
+.landing {
+  padding: 60px 0px;
+  width: 100%;
+}
+
+.splash-container {
+  height: 500px; 
+  margin: auto;
+  width: 75%;
+}
+
 .blurb-box {
+  display: inline-block;
+  float: left;
+  padding: 20px;
   background-color: grey;
 }
 
@@ -14,6 +37,11 @@
 .blurb-box p {
   font-family: 'Raleway', serif;
   font-size: 1.5em;
+}
+
+.button-box {
+  display: inline-block;
+  float: right;
 }
 
 .button-box span {
@@ -42,6 +70,7 @@
   }
 
   .splash-container {
+    width: 100%;
     padding: 10px 0px;
     background-color: white;
   }
@@ -120,6 +149,11 @@
     top: 70px;
     left: 0;
     width: 100%;
+    padding-top: 0;
+  }
+
+  .landing {
+    padding-top: 10px;
   }
 
   .splash-container {
