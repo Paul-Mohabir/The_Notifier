@@ -132,10 +132,10 @@ header a, a:hover, a:visited {
 
 /* TABLET */
 
-@media (max-width: 768px) and (min-width: 426px) {
+@media (max-width: 1024px) and (min-width: 426px) {
 
   #spacer{
-    height: 70px; 
+    height: 70px;
   }
 
   #logo {

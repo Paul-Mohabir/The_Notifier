@@ -23,6 +23,8 @@
 }
 
 .blurb-box {
+  margin: auto;
+  width: 70%;
   padding: 20px;
   background-color: grey;
 }
@@ -37,10 +39,23 @@
   font-size: 1.5em;
 }
 
-// .button-box {
-//   display: inline-block;
-//   float: right;
-// }
+.button-box {
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.info-container {
+  display: none;
+}
+
+.info-box {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+// LINK STYLES
 
 .button-box span {
   width: 100px;
@@ -68,7 +83,7 @@
   }
 
   .landing {
-    padding: 0; 
+    padding: 0;
   }
 
   .splash-container {
@@ -144,7 +159,7 @@
 
 // TABLET
 
-@media(max-width: 768px) and (min-width: 426px){
+@media(max-width: 1024px) and (min-width: 426px){
 
   .page-container {
     position: absolute;
