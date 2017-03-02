@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'pages_controller#index'
 
-  resources :users, :notifications, :show, :shifts
+  resources :users, :notifications, :shifts
   resources :user_sessions, only: [:new, :create, :destroy]
 
   get 'login' => 'user_sessions#new', :as => :login
