@@ -20,30 +20,44 @@
       <h1> <%= link_to "notify!", root_url %> </h1>
     </div>
 
+<!-- NAVIGATION -->
+
     <div class="navbar">
       <% if current_user %>
-
-        <span id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </span>
-
         <ul>
           <li id="nav-fullscreen-link"> <%= link_to 'My Notifications', notifications_url %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'Logout', :logout, method: :post %></li>
           <li id="nav-name-display"> <%= current_user.name %> </li>
         </ul>
-
       <% else %>
-
-        <span id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </span>
-
         <ul>
           <li id="nav-fullscreen-link"> <%= link_to 'Login', :login %></li>
           <li id="nav-fullscreen-link"> <%= link_to 'Register', new_user_path %> </li>
         </ul>
-        
       <% end %>
+
+      <!-- Drop Down Menu -->
+
+      <span id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </span>
+        <div class="drop-down">
+          <% if current_user %>
+            <ul>
+              <li> <%= current_user.name %> </li>
+              <li> <%= link_to 'My Dashboard', notifications_url %> </li>
+              <li> <%= link_to 'Logout', :logout, method: :post %> </li>
+            </ul>
+          <% else %>
+            <ul>
+              <li> <%= link_to 'Login', :login %> </li>
+              <li> <%= link_to 'Register', new_user_path %> </li> 
+            </ul>
+          <% end %>
+        </div>
     </div>
 
   </header>
+
+  <!-- SPACER -->
 
   <div id="spacer"></div>
 
