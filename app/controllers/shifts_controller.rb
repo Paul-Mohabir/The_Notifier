@@ -1,7 +1,12 @@
 class ShiftsController < ApplicationController
-
+  def index
+    @shift = Shift.all
+  end
   def new
     @shift =Shift.new
+  end
+  def show
+    @shift = Shift.find(params[:id])
   end
 
   def create
@@ -22,8 +27,11 @@ class ShiftsController < ApplicationController
     else
       starting = '0'
       @time_of_day = 'Night Shift'
+    end
   end
-end
-
+  private
+  def shift_params
+    params.require(:shift).permit(:time_of_day)
+  end
 
 end
