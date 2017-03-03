@@ -76,6 +76,8 @@ header a, a:hover, a:visited {
   display: none;
   z-index: 100;
   color: white;
+  border: none;
+  background-color: #277a64;
 }
 
 .material-icons.md-48 {
@@ -128,6 +130,24 @@ header a, a:hover, a:visited {
     padding: 5px 20px;
   }
 
+  .drop-down {
+    position: fixed;
+    right: 0;
+    top: 60px;
+  }
+
+  .drop-down ul {
+    margin-right: 0px;
+  }
+
+  .drop-down li {
+    display: none;
+    width: 100%;
+
+    text-align: left;
+    background-color: red;
+  }
+
 }
 
 /* TABLET */
@@ -175,12 +195,18 @@ header a, a:hover, a:visited {
 
   .drop-down {
     position: fixed;
-    display: block; 
     right: 0;
-    top: 60px;
-    z-index: 100;
+    top: 70px;
 
-    background-color: green
+
+  }
+
+  .drop-down li {
+    display: block;
+    width: 100%;
+
+    font-size: 2em;
+    background-color: red;
   }
 
 }

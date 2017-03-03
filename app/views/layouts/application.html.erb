@@ -26,6 +26,7 @@
       <% if current_user %>
         <ul>
           <li id="nav-fullscreen-link"> <%= link_to 'My Notifications', notifications_url %> </li>
+          <li id="nav-fullscreen-link"> <%= link_to 'My Calendar', calendars_url %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'Logout', :logout, method: :post %></li>
           <li id="nav-name-display"> <%= current_user.name %> </li>
         </ul>
@@ -38,7 +39,10 @@
 
       <!-- Drop Down Menu -->
 
-      <span id="nav-mobile-menu"> <i class="material-icons md-48">reorder</i> </span>
+      <button id="nav-mobile-menu">
+        <span> <i class="material-icons md-48">reorder</i> </span>
+      </button>
+
         <div class="drop-down">
           <% if current_user %>
             <ul>
@@ -49,7 +53,7 @@
           <% else %>
             <ul>
               <li> <%= link_to 'Login', :login %> </li>
-              <li> <%= link_to 'Register', new_user_path %> </li> 
+              <li> <%= link_to 'Register', new_user_path %> </li>
             </ul>
           <% end %>
         </div>
