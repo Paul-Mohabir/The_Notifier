@@ -131,6 +131,7 @@ header a, a:hover, a:visited {
   }
 
   .drop-down {
+    display: none;
     position: fixed;
     right: 0;
     top: 60px;
@@ -141,11 +142,9 @@ header a, a:hover, a:visited {
   }
 
   .drop-down li {
-    display: none;
     width: 100%;
-
     text-align: left;
-    background-color: red;
+    background-color: #34a889;
   }
 
 }
@@ -197,8 +196,6 @@ header a, a:hover, a:visited {
     position: fixed;
     right: 0;
     top: 70px;
-
-
   }
 
   .drop-down li {
@@ -206,7 +203,7 @@ header a, a:hover, a:visited {
     width: 100%;
 
     font-size: 2em;
-    background-color: red;
+    background-color: #34a889;
   }
 
 }

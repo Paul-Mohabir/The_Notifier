@@ -1,3 +1,5 @@
+// styles for drop-down navigation menu go here.
+
 $(document).ready(function() {
   console.log("Hi this is javascript");
 
