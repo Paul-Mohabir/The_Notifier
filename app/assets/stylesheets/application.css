@@ -76,6 +76,8 @@ header a, a:hover, a:visited {
   display: none;
   z-index: 100;
   color: white;
+  border: none;
+  background-color: #277a64;
 }
 
 .material-icons.md-48 {
@@ -126,9 +128,6 @@ header a, a:hover, a:visited {
     float: right;
     height: 60px;
     padding: 5px 20px;
-    border: none; 
-
-    background-color: #277a64;
   }
 
   .drop-down {
