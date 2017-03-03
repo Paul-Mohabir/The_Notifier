@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :calendars
   root 'pages_controller#index'
 
-  resources :users, :notifications, :shifts
+  resources :users, :notifications, :shifts, :calendars
   resources :user_sessions, only: [:new, :create, :destroy]
 
   get 'login' => 'user_sessions#new', :as => :login
