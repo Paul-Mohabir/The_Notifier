@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<br><br><br>
 <h1>Calendars</h1>
+
 <%= month_calendar events: @calendars do |date, meetings| %>
-  <%= date.mday %>
+<div class= 'calendar_day'>
+  <strong><%= date.mday %></strong>
 
   <% meetings.each do |meeting| %>
     <div>
@@ -10,6 +12,7 @@
       <%= meeting.start_time %>
     </div>
   <% end %>
+</div>
 <% end %>
 
 <%= link_to 'New Calendar', new_calendar_path %>
