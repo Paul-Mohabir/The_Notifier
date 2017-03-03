@@ -126,6 +126,27 @@ header a, a:hover, a:visited {
     float: right;
     height: 60px;
     padding: 5px 20px;
+    border: none; 
+
+    background-color: #277a64;
+  }
+
+  .drop-down {
+    position: fixed;
+    right: 0;
+    top: 60px;
+  }
+
+  .drop-down ul {
+    margin-right: 0px;
+  }
+
+  .drop-down li {
+    display: none;
+    width: 100%;
+
+    text-align: left;
+    background-color: red;
   }
 
 }
@@ -175,12 +196,18 @@ header a, a:hover, a:visited {
 
   .drop-down {
     position: fixed;
-    display: block; 
     right: 0;
-    top: 60px;
-    z-index: 100;
+    top: 70px;
 
-    background-color: green
+
+  }
+
+  .drop-down li {
+    display: block;
+    width: 100%;
+
+    font-size: 2em;
+    background-color: red;
   }
 
 }
