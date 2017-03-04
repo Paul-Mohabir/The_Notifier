@@ -1,13 +1,14 @@
 // Place all the styles related to the Calendars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.calenday_day {
-  border: black solid 3px;
-}
+
 table {
   border-collapse: collapse;
 }
 
 table, thead, th, td {
   border: 3px solid black;
+}
+a {
+  color: black;
 }
