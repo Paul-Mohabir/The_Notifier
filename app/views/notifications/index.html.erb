@@ -1,3 +1,7 @@
+<br><br>  <br>
 <% @notifications.each do |msg| %>
   <br><%= msg.open_position %><br><br>
 <% end %>
+
+<br><br><br>
+<%= link_to 'New Notification', new_notification_path %>
