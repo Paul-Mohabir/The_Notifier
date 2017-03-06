@@ -64,7 +64,7 @@
 
   <!-- SPACER -->
 
-  <div id="spacer"></div>
+  <!-- <div id="spacer"></div> -->
 
   <% flash.each do |key, message| %>
     <div class="flash-<%= key %>">
@@ -73,7 +73,9 @@
   <% end %>
 
   <body>
-    <%= yield %>
+    <div class="page-container">
+      <%= yield %>
+    </div>
   </body>
 
 </html>
