@@ -1,0 +1,186 @@
+/* HEADER STYLES: */
+
+header a, a:hover, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/* FULLSCREEN: */
+
+#logo {
+  position: fixed;
+  box-sizing: content-box;
+  top: 0px;
+  left: 0px;
+  padding: 10px 40px;
+  z-index: 100;
+
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.50em;
+  line-height: 0px;
+  color: white;
+  background-color: #277a64;
+}
+
+/*-------------------------------*/
+
+.navbar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 99;
+
+  background-color: #277a64;
+}
+
+.navbar ul {
+  float: right;
+  margin: auto;
+  margin-right: 30px;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 1em;
+
+  font-family: 'Raleway', serif;
+  color: white;
+}
+
+#nav-mobile-menu {
+  display: none;
+  z-index: 100;
+  color: white;
+  border: none;
+  background-color: #277a64;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* SPACER STYLE*/
+
+#spacer {
+  position: absolute;
+  overflow: hidden;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+}
+
+/* MOBILE */
+
+@media(max-width: 425px) {
+
+  #spacer {
+    height: 60px;
+  }
+
+  #logo {
+    font-size: 1.25em;
+    padding: 5px 20px;
+    height: 50px;
+  }
+
+  .navbar {
+    position: fixed;
+    height: 60px;
+  }
+
+  #nav-fullscreen-link {
+    display: none
+  }
+
+  #nav-name-display {
+    display: none;
+  }
+
+  #nav-mobile-menu {
+    display: inline-block;
+    float: right;
+    height: 60px;
+    padding: 5px 20px;
+  }
+
+  .drop-down {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 60px;
+  }
+
+  .drop-down ul {
+    margin-right: 0px;
+  }
+
+  .drop-down li {
+    width: 100%;
+    text-align: left;
+    background-color: #34a889;
+  }
+
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) and (min-width: 426px) {
+
+  #spacer{
+    height: 70px;
+  }
+
+  #logo {
+    height: 50px;
+    padding-top: 7px;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar ul {
+    text-align: center;
+    float: right;
+    height: 70px;
+    margin-right: 0px;
+  }
+
+  .navbar ul li {
+    float: right;
+    padding: 25px 0px;
+  }
+
+  #nav-fullscreen-link {
+    display: none;
+  }
+
+  #nav-name-display {
+    font-size: 1.5em;
+  }
+
+  #nav-mobile-menu {
+    display: inline-block;
+    float: right;
+    padding: 9px 20px;
+  }
+
+  .drop-down {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 70px;
+  }
+
+  .drop-down li {
+    display: block;
+    width: 100%;
+
+    font-size: 2em;
+    background-color: #34a889;
+  }
+
+}
