@@ -1,18 +1,24 @@
 <p id="notice"><%= notice %></p>
-<br><br><br>
+<br><br><br><br><br><br>
+
 <h1>Calendars</h1>
+<%= form_tag("/calendars/search", method: "get") do %>
+  <%= label_tag(:calendars_id, "Search for:") %>
+  <%= text_field_tag(:calendars_id) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
 <%= month_calendar events: @calendars do |date, meetings| %>
 <div class= 'calendar_day'>
   <strong><%= date.mday %></strong>
 
-  <% meetings.each do |meeting| %>
+   <% meetings.each do |meeting| %>
     <div class="">
       <%= meeting.name %>
       <%= meeting.start_time %>
+      <%= meeting.id %>
     </div>
   <% end %>
-</div>
 <% end %>
 
 <%= link_to 'New Shift', new_calendar_path %>

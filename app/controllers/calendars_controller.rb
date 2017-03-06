@@ -7,9 +7,14 @@ class CalendarsController < ApplicationController
     @calendars = Calendar.all
   end
 
+  def search
+    params[:calendars_id]
+  end
+
   # GET /calendars/1
   # GET /calendars/1.json
   def show
+    @calendar = Calendar.find(params[:id])
   end
 
   # GET /calendars/new
