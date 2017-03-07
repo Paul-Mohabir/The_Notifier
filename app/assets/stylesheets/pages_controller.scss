@@ -67,14 +67,6 @@
 
 @media(max-width: 425px) {
 
-  .page-container {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-  }
-
   .landing {
     padding: 0;
   }
@@ -153,14 +145,6 @@
 // TABLET
 
 @media(max-width: 1024px) and (min-width: 426px){
-
-  .page-container {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding-top: 0;
-  }
 
   .landing {
     padding-top: 10px;
