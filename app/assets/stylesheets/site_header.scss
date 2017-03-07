@@ -19,7 +19,7 @@ header a, a:hover, a:visited {
   font-size: 1.50em;
   line-height: 0px;
   color: white;
-  background-color: #277a64;
+  background-color: $dark-green;
 }
 
 /*-------------------------------*/
@@ -31,7 +31,7 @@ header a, a:hover, a:visited {
   width: 100%;
   z-index: 99;
 
-  background-color: #277a64;
+  background-color: $dark-green;
 }
 
 .navbar ul {
@@ -53,7 +53,7 @@ header a, a:hover, a:visited {
   z-index: 100;
   color: white;
   border: none;
-  background-color: #277a64;
+  background-color: $dark-green;
 }
 
 .material-icons.md-48 {
@@ -61,7 +61,7 @@ header a, a:hover, a:visited {
 }
 
 .drop-down {
-  display: none; 
+  display: none;
 }
 
 /* SPACER STYLE*/
@@ -124,7 +124,7 @@ header a, a:hover, a:visited {
   .drop-down li {
     width: 100%;
     text-align: left;
-    background-color: #34a889;
+    background-color: $light-green;
   }
 
 }
@@ -184,7 +184,7 @@ header a, a:hover, a:visited {
     width: 100%;
 
     font-size: 2em;
-    background-color: #34a889;
+    background-color: $light-green;
   }
 
 }
