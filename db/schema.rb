@@ -35,12 +35,19 @@ ActiveRecord::Schema.define(version: 20170306213035) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "schedules", force: :cascade do |t|
+    t.string   "day"
+    t.string   "shift"
+    t.string   "employee"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shifts", force: :cascade do |t|
-    t.integer  "user_id"
+    t.string   "employee"
     t.string   "time_of_day"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_shifts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

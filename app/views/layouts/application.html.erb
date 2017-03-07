@@ -47,7 +47,7 @@
           <% if current_user %>
             <ul>
               <li> <%= current_user.name %> </li>
-              <li> <%= link_to 'My Dashboard', notifications_url %> </li>
+              <li> <%= link_to 'My Dashboard', user_path(current_user) %> </li>
               <li> <%= link_to 'Calendar', calendars_url %> </li>
               <li> <%= link_to 'Logout', :logout, method: :post %> </li>
             </ul>
@@ -62,10 +62,6 @@
 
   </header>
 
-  <!-- SPACER -->
-
-  <!-- <div id="spacer"></div> -->
-
   <% flash.each do |key, message| %>
     <div class="flash-<%= key %>">
       <%= message %>
@@ -77,5 +73,9 @@
       <%= yield %>
     </div>
   </body>
+
+  <!-- <div class="footer">
+    <span> Matthew Evershed, Paul Mohabir & Joseph Papaluca. 2017 </span>
+  </div> -->
 
 </html>
