@@ -6,13 +6,24 @@ table {
   border-collapse: collapse;
 }
 
-table, thead, th, td {
-  border: 3px solid black;
-}
-a {
-  color: black;
+// table, thead, th, td {
+//   border: 1px solid black;
+//   background-color: white;
+// }
+
+//
+// .calendar_day {
+//   padding: 15px;
+// }
+
+.calendar-full {
+  background-color: $light-green;
 }
 
-.calendar_day {
-  padding: 15px;
+th, td {
+  width: 100px;
+  height: 75px;
+
+  border: 1px solid black; 
+  background-color: white;
 }
