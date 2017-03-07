@@ -10,8 +10,8 @@
    <% meetings.each do |meeting| %>
     <div class="">
       <%= meeting.name %>
-      <%= meeting.start_time.hour %>
-      <%= %>
+      <%= meeting.start_time.hour %> <br>
+      <%= meeting.id %>
     </div>
   <% end %>
 <% end %>
