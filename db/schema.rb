@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306213035) do
+ActiveRecord::Schema.define(version: 20170307202407) do
 
   create_table "calendars", force: :cascade do |t|
     t.string   "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170306213035) do
   create_table "companies", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "EmployeeID"
+    t.integer  "userid"
     t.string   "name"
   end
 
@@ -35,19 +35,12 @@ ActiveRecord::Schema.define(version: 20170306213035) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "schedules", force: :cascade do |t|
-    t.string   "day"
-    t.string   "shift"
-    t.string   "employee"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shifts", force: :cascade do |t|
-    t.string   "employee"
+    t.integer  "user_id"
     t.string   "time_of_day"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_shifts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
