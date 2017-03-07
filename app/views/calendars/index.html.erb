@@ -1,12 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<h1>Calendars</h1>
-<%= form_tag("/calendars/search", method: "get") do %>
-  <%= label_tag(:calendars_id, "Search for:") %>
-  <%= text_field_tag(:calendars_id) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<h1>Schedule</h1>
 
 <%= month_calendar events: @calendars do |date, meetings| %>
 <div class= 'calendar_day'>
