@@ -1,6 +1,10 @@
 
-<div class="page-container">
+  <div id="user-links">
+    <%= link_to "My Notifications", notifications_url %>
+    <%= link_to "My Calendar", calendars_url %> 
+  </div>
 
+  <div class="user-info">
     <p id="notice"><%= notice %></p>
 
     <p>
@@ -32,8 +36,7 @@
       <strong> Shift Preference </strong>
       <%= @user.shift_preference %>
     </p>
+  </div>
 
     <%= link_to 'Edit', edit_user_path(@user) %> |
     <%= link_to 'Back', user_path(@user) %>
-
-</div> 
