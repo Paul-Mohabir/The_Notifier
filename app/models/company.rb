@@ -1,4 +1,4 @@
 class Company < ApplicationRecord
-  has_one :calendar
+  has_one :Calendar
   validates_presence_of :name
 end
