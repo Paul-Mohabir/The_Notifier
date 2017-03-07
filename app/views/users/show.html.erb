@@ -1,44 +1,47 @@
 
-  <span id="dashboard-header"> My Dashboard </span>
+  <div class="user-box">
 
-  <div id="user-links">
-    <%= link_to "My Notifications", notifications_url %>
-    <%= link_to "My Calendar", calendars_url %>
+    <div id="dashboard-header">
+      <h1> My Dashboard </h1>
+    </div>
+
+    <div class="user-info-container">
+      <div id="user-name">
+        <h2> <%= @user.name %> </h2>
+        @user.company
+      </div>
+    </div>
+
+    <div id="user-info-header">
+      <h2> My Contact Info: </h2>
+    </div>
+
+    <div class="user-info-container">
+      <div>
+        <%= @user.email %>
+      </div>
+      <div>
+        <%= @user.address %>
+      </div>
+      <div>
+        <%= @user.phone %>
+      </div>
+      <div>
+        <%= @user.emergency_contact %>
+      </div>
+        <!-- <%= @user.shift_preference %> -->
+    </div>
+    
+    <div class="user-edit-header">
+      <%= link_to 'Edit', edit_user_path(@user) %>
+    </div>
+
   </div>
 
-  <div class="user-info">
-    <p id="notice"><%= notice %></p>
 
-    <p>
-      <strong>Name: </strong>
-      <%= @user.name %>
-    </p>
-
-    <p>
-      <strong>Email: </strong>
-      <%= @user.email %>
-    </p>
-
-    <p>
-      <strong>Address: </strong>
-      <%= @user.address %>
-    </p>
-
-    <p>
-      <strong>Phone Number: </strong>
-      <%= @user.phone %>
-    </p>
-
-    <p>
-      <strong> Emergency Contact: </strong>
-      <%= @user.emergency_contact %>
-    </p>
-
-    <p>
-      <strong> Shift Preference </strong>
-      <%= @user.shift_preference %>
-    </p>
-  </div>
-
-    <%= link_to 'Edit', edit_user_path(@user) %> |
     <%= link_to 'Back', user_path(@user) %>
+
+    <!-- <div id="user-links">
+      <%= link_to "My Notifications", notifications_url %>
+      <%= link_to "My Calendar", calendars_url %>
+    </div> -->
