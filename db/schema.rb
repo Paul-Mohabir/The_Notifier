@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170308202818) do
   create_table "companies", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.integer  "userid"
     t.string   "name"
   end
 
