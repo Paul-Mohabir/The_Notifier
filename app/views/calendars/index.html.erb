@@ -3,17 +3,19 @@
 
 <h1>Schedule</h1>
 
-<%= month_calendar events: @calendars do |date, meetings| %>
-<div class= 'calendar_day'>
-  <strong><%= date.mday %></strong>
+<div class="calendar-full">
+  <%= month_calendar events: @calendars do |date, meetings| %>
+  <div class= 'calendar_day'>
+    <strong><%= date.mday %></strong>
 
-   <% meetings.each do |meeting| %>
-    <div class="">
-      <%= meeting.name %>
-      <%= meeting.start_time.hour %> <br>
-      <%= meeting.id %>
-    </div>
+     <% meetings.each do |meeting| %>
+      <div class="">
+        <%= meeting.name %>
+        <%= meeting.start_time.hour %>
+        <%= %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
 <%= link_to 'New Shift', new_calendar_path %>
