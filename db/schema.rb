@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20170308202818) do
   end
 
   create_table "notifications", force: :cascade do |t|
-    t.integer  "author_id"
-    t.integer  "recipient_id"
+    t.string   "author_id"
+    t.string   "recipient_id"
     t.string   "title"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
