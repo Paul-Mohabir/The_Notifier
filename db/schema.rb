@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308202818) do
+ActiveRecord::Schema.define(version: 20170308212650) do
 
   create_table "calendars", force: :cascade do |t|
     t.string   "name"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20170308202818) do
   end
 
   create_table "notifications", force: :cascade do |t|
-    t.string   "author_id"
-    t.string   "recipient_id"
+    t.integer  "author_id"
+    t.integer  "recipient_id"
     t.string   "title"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20170308202818) do
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
     t.string   "location"
+    t.integer  "company_id"
     t.index ["remember_me_token"], name: "index_users_on_remember_me_token"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end
