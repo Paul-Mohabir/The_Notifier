@@ -1,4 +1,16 @@
-<!-- <% @notifications.reverse_each do |msg| %>
-<% end %> -->
 
-<%= link_to 'New Notification', new_notification_path %>
+<div class="notification-box">
+  <div id="notification">
+    <% @notifications.reverse_each do |notification| %>
+      <div id="notification-header">
+        <h1> <%= notification.title %> </h1>
+      </div>
+      <h2> <%= notification.author_id %> </h2>
+      <h2> <%= notification.company_id %> </h2>
+      <p>
+        <%= notification.message %>
+      </p>
+    <% end %>
+  </div>
+  <%= link_to 'New Notification', new_notification_path %>
+</div>
