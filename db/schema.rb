@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307210254) do
+ActiveRecord::Schema.define(version: 20170308194420) do
 
   create_table "calendars", force: :cascade do |t|
     t.string   "name"
@@ -28,26 +28,19 @@ ActiveRecord::Schema.define(version: 20170307210254) do
   end
 
   create_table "notifications", force: :cascade do |t|
-    t.string   "shift_cancelled"
-    t.string   "shift_rescheduled"
-    t.string   "open_position"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
-  create_table "schedules", force: :cascade do |t|
-    t.string   "day"
-    t.string   "shift"
-    t.string   "employee"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "author_id"
+    t.string   "recipient_id"
+    t.string   "body"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "shifts", force: :cascade do |t|
-    t.string   "employee"
+    t.integer  "user_id"
     t.string   "time_of_day"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_shifts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
