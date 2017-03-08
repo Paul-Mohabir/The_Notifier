@@ -15,6 +15,8 @@ class NotificationsController < ApplicationController
 
   def create
     @notification = Notification.new(notification_params)
+    @notification.author_id = current_user.id
+    @notification.company_id = current_user.company_id
     if @notification.save
       redirect_to notifications_path
     else
@@ -31,7 +33,7 @@ class NotificationsController < ApplicationController
   private
 
   def notification_params
-    params.require(:notification).permit(:open_position)
+    params.require(:notification).permit(:author_id, :company_id, :title, :message)
   end
 
 end
