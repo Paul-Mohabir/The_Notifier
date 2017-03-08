@@ -1,5 +1,7 @@
 class Notification < ApplicationRecord
-  belongs_to :User
+  belongs_to :author
+  belongs_to :company
+  has_many :recipients, source: :user
 
-  validates_presence_of :open_position
+  validates_presence_of :author_id, :company_id, :title, :message
 end
