@@ -26,6 +26,7 @@
       <% if current_user %>
         <ul>
           <li id="nav-fullscreen-link"> <%= link_to 'Company Home', root_url %> </li>
+          <li id="nav-fullscreen-link"> <%= link_to 'My Dashboard', user_path(current_user) %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'My Notifications', notifications_url %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'My Calendar', calendars_url %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'Logout', :logout, method: :post %></li>

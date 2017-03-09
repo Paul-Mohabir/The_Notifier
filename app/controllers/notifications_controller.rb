@@ -33,7 +33,7 @@ class NotificationsController < ApplicationController
   private
 
   def notification_params
-    params.require(:notification).permit(:author_id, :company_id, :title, :message)
+    params.require(:notification).permit(:author_id, :recipient_id, :company_id, :title, :message)
   end
 
 end

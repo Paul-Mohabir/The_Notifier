@@ -1,18 +1,40 @@
 // Place all the styles related to the Notifications controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#notification-header{
-  font-family: $roboto-slab;
-  font-size: 1em;
-  color: white;
-  background-color: $dark-green;
-}
+
+
 .notification-box {
   margin: auto;
   margin-top: 15px;
   width: 90%;
   background-color: white;
 }
+
+#notifications-header{
+  font-family: $roboto-slab;
+  font-size: 1em;
+  color: white;
+  background-color: $dark-green;
+}
+
+#notifications-number {
+  font-family: $raleway;
+}
+
+#notification-title{
+  font-family: $roboto-slab;
+  font-size: 1em;
+  color: white;
+  background-color: $dark-green;
+}
+
+.notification-info {
+  font-family: $raleway;
+  font-size: 1em;
+}
+
+// MEDIA QUERIES
+
 
 @media(max-width: 425px) {
 
@@ -23,14 +45,30 @@
     background-color: white;
   }
 
-  #notification-header {
+  #notifications-header{
+    padding: 1px;
+    padding-left: 20px;
+  }
+
+  #notifications-number {
+    padding: 1px;
+    padding-left: 20px;
+  }
+
+  #notification-title {
+    padding: 1px;
+    padding-left: 20px;
+  }
+
+  .notification-info {
     padding: 1px;
     padding-left: 20px;
 
-    font-family: $roboto-slab;
-    font-size: 1em;
-    color: white;
-    background-color: $dark-green;
+    border-bottom: 1px solid $placeholder-grey;
+  }
+
+  #notification-author {
+    padding: 1px;
   }
 
 }

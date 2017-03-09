@@ -16,6 +16,11 @@
     <%= f.text_area :title %>
   </div>
 
+  <div>
+    <%= f.label :recipient_id %>
+    <%= f.select :recipient_id, User.pluck(:id) %>
+  </div>
+
 
   <div>
     <%= f.label :message %>

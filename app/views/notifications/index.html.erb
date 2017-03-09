@@ -1,11 +1,33 @@
 
 <div class="notification-box">
+
+  <div id="notifications-header">
+    <h1> My Notifications </h1>
+  </div>
+
+  <div id="notifications-number">
+    <h2> You have X new messages</h2>
+  </div>
+
   <div id="notification">
+
     <% @notifications.reverse_each do |notification| %>
-      <div id="notification-header">
+
+      <div id="notification-title">
         <h1> <%= notification.title %> </h1>
       </div>
-      <h4> <%= notification.author && notification.author.name %> </h4>
+
+      <div class="notification-info">
+        <div id="notification-author">
+           <h3> From: <%= notification.author && notification.author.name %> </h3>
+        </div>
+        <div id="notification-recipient">
+           <h3> To: <%= notification.recipient && notification.recipient.name %> </h3>
+        </div>
+      </div>
+
+
+
       <h4> <%= notification.company && notification.company.name %> </h4>
       <p>
         <strong><%= notification.title %> </strong><br>
@@ -14,5 +36,7 @@
       <br>
     <% end %>
   </div>
+
   <%= link_to 'New Notification', new_notification_path %>
+
 </div>
