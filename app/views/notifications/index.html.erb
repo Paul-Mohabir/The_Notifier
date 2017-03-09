@@ -16,20 +16,10 @@
       <div id="notification-title">
         <h1> <%= notification.title %> </h1>
       </div>
-
-      <div class="notification-info">
-        <div id="notification-author">
-           <h3> From: <%= notification.author && notification.author.name %> </h3>
-        </div>
-        <div id="notification-recipient">
-           <h3> To: <%= notification.recipient && notification.recipient.name %> </h3>
-        </div>
-      </div>
-
-
-
-      <h4> <%= notification.company && notification.company.name %> </h4>
-      <p>
+      <h4 class="author-box"> <%= notification.author && notification.author.name %> </h4>
+      <h4 class="company-box"> <%= notification.company && notification.company.name %> </h4>
+      <h4 class="recepient-box"> <%= notification.recepient && notification.recepient.name %></h4>
+      <p class="message-box">
         <strong><%= notification.title %> </strong><br>
         <%= notification.message %>
       </p>
