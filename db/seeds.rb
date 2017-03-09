@@ -13,12 +13,13 @@ Company.destroy_all
   )
 end
 
-User.create!(name:  "Mr.snruB",
-             email: "Mburns@snpp.com",
-             company: "Spriingfield Nuclear Power Plant"
-             address: "fake street"
-             phone: "939 - 555 9034"
-             emergency_contact: "Waylon Smithers"
-             shift_preference: "Morning"
-             password: "123"
-             admin: true)
+User.create!
+  (name:  "Mr.snruB",
+  email: "Mburns@snpp.com",
+  company: "Spriingfield Nuclear Power Plant",
+  address: "fake street",
+  phone: "939 - 555 9034",
+  emergency_contact: "Waylon Smithers",
+  shift_preference: "Morning",
+  password: "123",
+  admin: true)
