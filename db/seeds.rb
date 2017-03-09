@@ -12,3 +12,7 @@ Company.destroy_all
     name: "Company #{i}"
   )
 end
+
+User.create!(name:  "Mr.snruB",
+             email: "Mburns@snpp.com",
+             admin: true)
