@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Company.destroy_all
 
+
 5.times do |i|
   p = Company.create!(
     name: "Company #{i}"
