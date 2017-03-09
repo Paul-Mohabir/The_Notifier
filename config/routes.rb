@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :calendars
+  resources :companies
 
   root 'pages_controller#index'
 
