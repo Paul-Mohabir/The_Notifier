@@ -1,5 +1,5 @@
 class Notification < ApplicationRecord
-  belongs_to :author
+  belongs_to :author, class_name: "User"
   belongs_to :company
   has_many :recipients, source: :user
 

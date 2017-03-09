@@ -5,11 +5,13 @@
       <div id="notification-header">
         <h1> <%= notification.title %> </h1>
       </div>
-      <h2> <%= notification.author_id %> </h2>
-      <h2> <%= notification.company_id %> </h2>
+      <h4> <%= notification.author && notification.author.name %> </h4>
+      <h4> <%= notification.company && notification.company.name %> </h4>
       <p>
+        <strong><%= notification.title %> </strong><br>
         <%= notification.message %>
       </p>
+      <br>
     <% end %>
   </div>
   <%= link_to 'New Notification', new_notification_path %>
