@@ -18,7 +18,7 @@
 
   <div>
     <%= f.label :recipient_id %>
-    <%= f.select :recipient_id, User.pluck(:id) %>
+    <%= f.select :recipient_id, User.pluck(:name, :id) %>
   </div>
 
 
