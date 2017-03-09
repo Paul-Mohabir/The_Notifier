@@ -10,9 +10,11 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+
     if current_user.admin == false && current_user.company_id != @company.id
       redirect_to root_path
     end
+    
   end
 
   def create
