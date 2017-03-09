@@ -13,10 +13,10 @@ Company.destroy_all
   )
 end
 
-User.create!
-  (name:  "Mr.snruB",
-  email: "Mburns@snpp.com",
-  company: "Spriingfield Nuclear Power Plant",
+User.create!(
+  name: "Mr.snruB",
+  email: "Montyburns@snpp.com",
+  company_id: Company.all.sample.id,
   address: "fake street",
   phone: "939 - 555 9034",
   emergency_contact: "Waylon Smithers",
