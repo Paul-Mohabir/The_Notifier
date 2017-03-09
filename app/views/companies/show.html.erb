@@ -1,5 +1,14 @@
 <div class="company-box">
+
   <div class="company-header">
-    <h1> <%= @company.name %> </h1> 
+    <h1> <%= @company.name %> </h1>
   </div>
+
+  <div class="employee-list">
+    <%= @user.each do  %>
+      <%= (User.where(id: company_id)).name %>
+
+    <% end %>
+  </div>
+
 </div>
