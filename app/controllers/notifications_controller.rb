@@ -17,7 +17,7 @@ class NotificationsController < ApplicationController
     @notification = Notification.new(notification_params)
     @notification.author_id = current_user.id
     @notification.company_id = current_user.company_id
-    @notification.recipient_id = User.where(id: 1)
+    
     if @notification.save
       redirect_to notifications_path
     else
