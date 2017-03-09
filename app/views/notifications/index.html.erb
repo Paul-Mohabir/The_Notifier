@@ -18,7 +18,7 @@
       </div>
       <h4 class="author-box"> <%= notification.author && notification.author.name %> </h4>
       <h4 class="company-box"> <%= notification.company && notification.company.name %> </h4>
-      <h4 class="recepient-box"> <%= (Notification.where(recipient_id: @user.id)).name %> </h4>
+      <h4 class="recepient-box"> <%= User.find(notification.recipient_id).name %> </h4>
       <p class="message-box">
         <strong><%= notification.title %> </strong><br>
         <%= notification.message %>
