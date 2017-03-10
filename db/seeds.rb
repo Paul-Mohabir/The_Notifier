@@ -16,7 +16,7 @@ end
 User.create!(
   name:  "Mr.snruB",
   email: "Mburns@snpp.com",
-  company: "Spriingfield Nuclear Power Plant",
+  Company: "Spriingfield Nuclear Power Plant",
   address: "fake street",
   phone: "939 - 555 9034",
   emergency_contact: "Waylon Smithers",
