@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Company.destroy_all
 
+
 5.times do |i|
   p = Company.create!(
     name: "Company #{i}"
@@ -15,8 +16,8 @@ end
 
 User.create!(
   name:  "Mr.snruB",
-  email: "Mburns@snpp.com",
-  Company: "Spriingfield Nuclear Power Plant",
+  email: "Montyburns@snpp.com",
+  company_id: Company.all.sample.id,
   address: "fake street",
   phone: "939 - 555 9034",
   emergency_contact: "Waylon Smithers",
