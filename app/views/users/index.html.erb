@@ -2,7 +2,7 @@
 
 <h1>Users</h1>
 
-<table>
+<table class="user-list">
   <thead>
     <tr>
       <th>Name</th>
@@ -20,7 +20,6 @@
         <td><%= user.phone %></td>
         <td><%= link_to 'Display', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to '', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
