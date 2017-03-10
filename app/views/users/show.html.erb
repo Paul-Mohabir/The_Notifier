@@ -8,7 +8,7 @@
     <div class="user-info-container">
       <div id="user-name">
         <h2> <%= @user.name %> </h2>
-          <%= (Company.find_by(id: @user.company_id)).name %>
+          <%= (Company.find_by(@user.company_id)).name %>
       </div>
     </div>
 
