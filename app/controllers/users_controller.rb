@@ -12,6 +12,10 @@ class UsersController < ApplicationController
   def show
   end
 
+  def hours_worked
+    hours_worked = sum(end_time - start_time)
+  end
+
   # GET /users/new
   def new
     @user = User.new
