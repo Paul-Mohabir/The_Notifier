@@ -6,7 +6,6 @@
   </div>
 
   <div id="notifications-number">
-    <h2> You have X new messages</h2>
   </div>
 
   <div id="notification">
@@ -21,6 +20,8 @@
       <h4 class="recepient-box"> <%= User.find(notification.recipient_id).name %> </h4>
       <p class="message-box">
         <strong><%= notification.title %> </strong><br>
+
+        <!--if @current_user.company_id = Notification.  -->
         <%= notification.message %>
       </p>
       <br>

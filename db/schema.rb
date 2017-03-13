@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170309201522) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "calendars", force: :cascade do |t|
     t.string   "name"
     t.datetime "start_time"
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 20170309201522) do
     t.string   "time_of_day"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_shifts_on_user_id"
+    t.index ["user_id"], name: "index_shifts_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,8 +70,8 @@ ActiveRecord::Schema.define(version: 20170309201522) do
     t.string   "location"
     t.integer  "company_id"
     t.boolean  "admin"
-    t.index ["remember_me_token"], name: "index_users_on_remember_me_token"
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
+    t.index ["remember_me_token"], name: "index_users_on_remember_me_token", using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", using: :btree
   end
 
 end

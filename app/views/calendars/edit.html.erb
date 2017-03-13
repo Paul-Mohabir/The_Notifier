@@ -2,5 +2,6 @@
 
 <%= render 'form', calendar: @calendar %>
 
-<%= link_to 'Show', @calendar %> |
+<%= link_to 'Show', @calendar %>
+<%= link_to 'Delete', calendar: @calendar.destroy %>
 <%= link_to 'Back', calendars_path %>

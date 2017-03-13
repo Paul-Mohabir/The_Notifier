@@ -15,7 +15,7 @@ Company.destroy_all
 end
 
 User.create!(
-  name:  "Mr.snruB",
+  name:  "Mr.Snrub",
   email: "Montyburns@snpp.com",
   company_id: Company.all.sample.id,
   address: "fake street",
