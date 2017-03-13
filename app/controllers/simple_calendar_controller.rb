@@ -5,8 +5,3 @@ class SimpleCalendarController < ApplicationController
   def show
 
   end
-
-
-
-
-end
