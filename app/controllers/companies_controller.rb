@@ -25,6 +25,9 @@ class CompaniesController < ApplicationController
   end
 
   def update
+
+    @company = Company.find(params[:id])
+
     respond_to do |format|
       if @company.update(company_params)
         format.html { redirect_to @company, notice: "Company info updated" }
