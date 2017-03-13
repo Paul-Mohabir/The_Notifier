@@ -1,0 +1,39 @@
+<%= form_for @company do |f| %>
+
+  <% if company.errors.any? %>
+
+    <div id="error-explanation">
+      <h2>
+        <%= pluralize(company.errors.count, "error") %> Couldn't save your changes!
+      </h2>
+      <ul>
+        <% company.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contact_info %>
+    <%= f.text_field :contact_info %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

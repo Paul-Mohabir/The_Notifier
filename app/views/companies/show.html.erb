@@ -4,4 +4,12 @@
     <h1> <%= @company.name %> </h1>
   </div>
 
+  <div class="employees-list">
+    <% @company.users.each do |user| %>
+      <h1><%= user.name %></h1>
+    <% end %>
+  </div>
+
+  <%= link_to 'Edit', edit_company_path(@company) %>
+
 </div>
