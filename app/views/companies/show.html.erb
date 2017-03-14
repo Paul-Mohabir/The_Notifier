@@ -2,6 +2,10 @@
 
   <div class="company-info">
 
+    <div id="company-header">
+      <h1> <%= @company.name %> </h1>
+    </div>
+
     <div id="company-photo">
       <% if @company.picture %>
         <%= image_tag @company.picture %>
@@ -10,17 +14,24 @@
       <% end %>
     </div>
 
-    <div class="company-header">
-      <h1> <%= @company.name %> </h1>
-    </div>
-
     <%= link_to 'Edit', edit_company_path(@company) %>
 
   </div>
 
+  <div class="company-list-box">
 
-  <div class="employees-list">
-    <%= render "employees" %>
+    <div id="company-nav">
+      <ul>
+        <li> <h1> Updates </h1> </li>
+        <li> <h1> Employees </h1> </li>
+      </ul>
+    </div>
+
+    <div class="employees-list">
+      <%= render "employees" %>
+    </div>
+
   </div>
+
 
 </div>

@@ -9,7 +9,7 @@
   margin: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 90%;
+  width: 1260px;
 
   text-align: center;
 
@@ -18,22 +18,58 @@
 
 .company-info {
   float: left;
-  display: inline-block;
   width: 60%;
+  margin: 0px;
 
   background-color: white;
 }
 
 #company-photo img {
-  width: 100%;
+  max-width: 100%;
 }
 
+#company-header {
+  padding: 5px;
 
-.employees-list {
+  font-family: $roboto-slab;
+  color: white;
+  background-color: $dark-green;
+}
+
+.company-list-box {
   float: right;
   width: 40%;
 }
 
+#company-nav {
+  background-color: $dark-blue;
+}
+
+#company-nav ul {
+  margin: 0px;
+  list-style: none;
+}
+
+#company-nav li {
+
+  display: inline-block;
+  width: 49%;
+  padding: 5px;
+
+  font-family: $roboto-slab;
+  text-align: center;
+  color: white;
+}
+
+#company-employee {
+  padding: 1px;
+  background-color: white;
+  border-bottom: 1px solid $light-blue;
+}
+
+#company-empty-list {
+  padding: 100px 0px; 
+}
 
 
 
