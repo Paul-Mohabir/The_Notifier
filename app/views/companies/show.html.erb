@@ -5,9 +5,7 @@
   </div>
 
   <div class="employees-list">
-    <% @company.users.each do |user| %>
-      <h1><%= user.name %></h1>
-    <% end %>
+    <%= render "employees" %>
   </div>
 
   <%= link_to 'Edit', edit_company_path(@company) %>
