@@ -1,5 +1,13 @@
 <div class="company-box">
 
+  <div id="company-photo">
+    <% if @company.picture %>
+      <%= image_tag @company.picture %>
+    <% else %>
+      <%= image_tag ActionController::Base.helpers.asset_path("company_placeholder.png") %>
+    <% end %>
+  </div>
+
   <div class="company-header">
     <h1> <%= @company.name %> </h1>
   </div>
