@@ -6,7 +6,11 @@
     </div>
 
     <div id="user-photo">
-      <%= image_tag(@user.user_photo) %> 
+      <% if @user.user_photo %>
+        <%= image_tag @user.user_photo %>
+      <% else %>
+        <%= image_tag ActionController::Base.helpers.asset_path("user_placeholder.png") %>
+      <% end %> 
     </div>
 
     <div class="user-info-container">
