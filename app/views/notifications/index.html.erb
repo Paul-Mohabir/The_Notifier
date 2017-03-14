@@ -13,7 +13,7 @@
     <% @notifications.reverse_each do |notification| %>
 
       <div id="notification-title">
-        <h1> <%= notification.title %> </h1>
+        <h1> <% notification.title %> </h1>
       </div>
       <h4 class="author-box"> <%= notification.author && notification.author.name %> </h4>
       <h4 class="company-box"> <%= notification.company && notification.company.name %> </h4>
