@@ -1,30 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Schedule</h1>
+
 <div class="calendar-desktop">
   <div class="calendar-full">
     <%= month_calendar events: @calendars do |date, meetings| %>
-    <div class= 'calendar_day'>
+      <div class= 'calendar_day'>
       <strong><%= date.mday %></strong>
+        <% meetings.each do |shift| %>
 
-<<<<<<< HEAD
-     <% meetings.each do |meeting| %>
-     <!--need an if statement  -->
-      <div class="">
-        <%= meeting.name %>
-        <%= meeting.start_time.hour %>
-        <%= %>
+          <div class="">
+            <%= shift.name %>
+            <%= shift.start_time.hour %>
+          </div>
+        <% end %>
+
       </div>
-=======
-       <% meetings.each do |meeting| %>
-        <div class="">
-          <%= meeting.name %>
-          <%= meeting.start_time.hour %>
-          <%= %>
-
-        </div>
-      <% end %>
->>>>>>> ce0f108d9ecd1301437be37d417270d9ce01d520
     <% end %>
   </div>
 </div>
@@ -34,17 +25,16 @@
 <div class="calendar-mobile">
   <div class="calendar-full">
     <%= week_calendar events: @calendars do |date, meetings| %>
-    <div class= 'calendar_day'>
-      <strong><%= date.mday %></strong>
-
-       <% meetings.each do |meeting| %>
-        <div class="">
-          <%= meeting.name %>
-          <%= meeting.start_time.hour %>
-          <%= %>
-        </div>
+      <div class= 'calendar_day'>
+        <strong><%= date.mday %></strong>
+          <% meetings.each do |shift| %>
+              <div class="">
+                <%= shift.name %>
+                <%= shift.start_time.hour %>
+            </div>
+          <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
