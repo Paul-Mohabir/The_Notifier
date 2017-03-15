@@ -12,13 +12,13 @@ $(document).ready(function() {
     $(this).css('background-color', '#1554c1');
   });
 
-  $("#employees-button").on('click', function() {
-    $.ajax({
-      url:
-      method: 'GET',
-      data:
-      dataType:
-    })
-  });
+  // $("#employees-button").on('click', function() {
+  //   $.ajax({
+  //     url:
+  //     method: 'GET',
+  //     data:
+  //     dataType:
+  //   })
+  // });
 
 });
