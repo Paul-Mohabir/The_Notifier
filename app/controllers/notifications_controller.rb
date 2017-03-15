@@ -1,6 +1,7 @@
 class NotificationsController < ApplicationController
 
 
+
   def index
     @notifications = Notification.all
   end
@@ -14,11 +15,18 @@ class NotificationsController < ApplicationController
   end
 
   def create
+
     @notification = Notification.new(notification_params)
     @notification.author_id = current_user.id
     @notification.company_id = current_user.company_id
-    
+
     if @notification.save
+      @client = Twilio::REST::Client.new ENV["account_sid"], ENV["auth_token"]
+      @client.messages.create(
+      from: '+16475590258',
+      to: '+16476181300',
+      body: 'Hey there!'
+      )
       redirect_to notifications_path
     else
       render :new

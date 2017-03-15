@@ -11,9 +11,9 @@ end
 # ruby '2.3.3'
 
 
-
+gem 'twilio-ruby'
 gem 'pg'
-
+gem 'figaro'
 
 gem 'sorcery'
 

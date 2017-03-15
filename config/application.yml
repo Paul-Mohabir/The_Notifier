@@ -1,5 +1,5 @@
-account_sid = "AC8a5840313172e7c0410eb4ec0aef3354" # Your Account SID from www.twilio.com/console
-auth_token = "bf3c3d1ac9d62d45201e09ae246d5514"   # Your Auth Token from www.twilio.com/console
+account_sid: "AC8a5840313172e7c0410eb4ec0aef3354" # Your Account SID from www.twilio.com/console
+auth_token: "bf3c3d1ac9d62d45201e09ae246d5514"   # Your Auth Token from www.twilio.com/console
 
 
 # Add configuration values here, as shown below.
