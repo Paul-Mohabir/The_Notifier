@@ -4,22 +4,10 @@
 
 <div class="calendar-desktop">
   <div class="calendar-full">
-
+    <h2><%= link_to 'New Shift', new_calendar_path %></h2>
     <%= month_calendar events: @calendars do |date, meetings| %>
       <div class= 'calendar_day'>
       <strong><%= date.mday %></strong>
-<<<<<<< HEAD
-        <% meetings.each do |meeting| %>
-          <% if meeting.company_id == current_user.company_id %>
-          <div class="">
-            <%= meeting.name %>
-            <%= meeting.start_time.hour %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-    <% end %>
-=======
 
         <% meetings.each do |shift| %>
           <% if shift.company_id == current_user.company_id %>
@@ -34,13 +22,13 @@
     <% end %>
 
   </div>
->>>>>>> 6fefdfb15672d858b2844c7c6c717b400985f3ab
 </div>
 
 <!-- MOBILE CALENDAR -->
 
 <div class="calendar-mobile">
   <div class="calendar-full">
+    <h2><%= link_to 'New Shift', new_calendar_path %></h2>
     <%= week_calendar events: @calendars do |date, meetings| %>
       <div class= 'calendar_day'>
         <strong><%= date.mday %></strong>
@@ -54,5 +42,3 @@
     </div>
   </div>
 </div>
-
-<%= link_to 'New Shift', new_calendar_path %>
