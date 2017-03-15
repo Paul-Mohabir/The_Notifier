@@ -1,4 +1,19 @@
-<% @company.users.each do |user| %>
-  <h1><%= user.name %></h1>
-  <p><%= user.phone %></p>
+<% if @company.users.count != 0 %>
+
+  <% @company.users.each do |user| %>
+
+    <div id="company-employee">
+      <h1><%= user.name %></h1>
+      <p><%= user.phone %></p>
+    </div>
+
+  <% end %>
+
+<% else %>
+
+  <div id="company-empty-list">
+    <h2> Oops! </h2>
+    <p> There doesn't seem to be anybody here! </p>
+  </div>
+
 <% end %>

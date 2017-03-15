@@ -1,0 +1,19 @@
+<% if @company.notifications.count != 0 %>
+
+  <% @company.notifications.each do |notification| %>
+
+    <div id="company-employee">
+      <h1><%= notification.title %></h1>
+      <p><%= notification.message %></p>
+    </div>
+
+  <% end %>
+
+<% else %>
+
+<div id="company-empty-list">
+  <h2> What's goin' on? </h2>
+  <p> There doesn't seem to be any news! </p>
+</div>
+
+<% end %>

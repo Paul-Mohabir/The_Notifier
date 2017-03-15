@@ -1,13 +1,37 @@
 <div class="company-box">
 
-  <div class="company-header">
-    <h1> <%= @company.name %> </h1>
+  <div class="company-info">
+
+    <div id="company-header">
+      <h1> <%= @company.name %> </h1>
+    </div>
+
+    <div id="company-photo">
+      <% if @company.picture %>
+        <%= image_tag @company.picture %>
+      <% else %>
+        <%= image_tag ActionController::Base.helpers.asset_path("company_placeholder.png") %>
+      <% end %>
+    </div>
+
+    <%= link_to 'Edit', edit_company_path(@company) %>
+
   </div>
 
-  <div class="employees-list">
-    <%= render "employees" %>
+  <div class="company-list-box">
+
+    <div id="company-nav">
+      <ul>
+        <li id="updates-button"> <h1> Updates </h1> </li>
+        <li id="employees-button"> <h1> Employees </h1> </li>
+      </ul>
+    </div>
+
+    <div class="employees-list">
+      <%= render "employees" %>
+    </div>
+
   </div>
 
-  <%= link_to 'Edit', edit_company_path(@company) %>
 
 </div>
