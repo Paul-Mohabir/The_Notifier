@@ -6,27 +6,16 @@
     <%= month_calendar events: @calendars do |date, meetings| %>
     <div class= 'calendar_day'>
       <strong><%= date.mday %></strong>
-
-<<<<<<< HEAD
-     <% meetings.each do |meeting| %>
-     <!--need an if statement  -->
-      <div class="">
-        <%= meeting.name %>
-        <%= meeting.start_time.hour %>
-        <%= %>
-      </div>
-=======
-       <% meetings.each do |meeting| %>
-        <div class="">
-          <%= meeting.name %>
-          <%= meeting.start_time.hour %>
-          <%= %>
-
-        </div>
+        <% meetings.each do |meeting| %>
+          <% if meeting.company_id == current_user.company_id %>
+          <div class="">
+            <%= meeting.name %>
+            <%= meeting.start_time.hour %>
+          </div>
+        <% end %>
       <% end %>
->>>>>>> ce0f108d9ecd1301437be37d417270d9ce01d520
+    </div>
     <% end %>
-  </div>
 </div>
 
 <!-- MOBILE CALENDAR -->

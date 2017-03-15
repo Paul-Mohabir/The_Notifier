@@ -11,7 +11,7 @@
   <div id="notification">
 
     <% @notifications.reverse_each do |notification| %>
-
+      <% if notification.company_id == current_user.company_id %>
       <div id="notification-title">
         <h1> <% notification.title %> </h1>
       </div>
@@ -25,6 +25,7 @@
         <%= notification.message %>
       </p>
       <br>
+    <% end %>
     <% end %>
   </div>
 
