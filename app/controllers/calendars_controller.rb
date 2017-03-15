@@ -4,7 +4,7 @@ class CalendarsController < ApplicationController
   # GET /calendars
   # GET /calendars.json
   def index
-    @calendars = Calendar.all
+    @calendars = Calendar.find(params[:company_id])
   end
 
   def search
@@ -14,10 +14,7 @@ class CalendarsController < ApplicationController
   # GET /calendars/1
   # GET /calendars/1.json
   def show
-    @calendar = Calendar.find(params[:id])
-    if current_user.admin == false && current_user.company_id != @company.id
-      redirect_to root_path
-    end
+
   end
 
   # GET /calendars/new
