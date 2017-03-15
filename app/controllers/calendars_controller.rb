@@ -4,7 +4,7 @@ class CalendarsController < ApplicationController
   # GET /calendars
   # GET /calendars.json
   def index
-    @calendars = Calendar.find(params[:company_id])
+    @calendars = Calendar.all
   end
 
   def search

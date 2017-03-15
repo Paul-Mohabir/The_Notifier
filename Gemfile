@@ -9,9 +9,9 @@ end
 
 ruby '2.3.1'
 
-
+gem 'twilio-ruby'
 gem 'pg'
-
+gem 'figaro'
 
 gem 'sorcery'
 
