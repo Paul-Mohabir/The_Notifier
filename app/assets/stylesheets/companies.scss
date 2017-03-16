@@ -4,78 +4,120 @@
 
 // GLOBAL STYLES
 
-.company-box {
-  display: flex;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 1260px;
-
-  text-align: center;
-
-  border: 1px solid black;
-}
-
-.company-info {
-  float: left;
-  width: 60%;
-  margin: 0px;
-
-  background-color: white;
-}
-
-#company-photo img {
-  max-width: 100%;
-}
-
-#company-header {
-  padding: 5px;
-
-  font-family: $roboto-slab;
-  color: white;
-  background-color: $dark-green;
-}
-
-.company-list-box {
-  float: right;
-  width: 40%;
-}
-
-#company-nav {
-  background-color: $dark-blue;
-}
-
-#company-nav ul {
-  margin: 0px;
-  list-style: none;
-}
-
-#company-nav li {
-  display: inline-block;
-  width: 49%;
-  padding: 5px;
-
-  font-family: $roboto-slab;
-  text-align: center;
-  color: white;
-}
-
-#company-employee {
-  padding: 1px;
-  background-color: white;
-  border-bottom: 1px solid $light-blue;
-}
-
-#company-empty-list {
-  padding: 100px 0px;
-}
-
-
 
 // DESKTOP STYLES
 
-// TABLET STYLES
+// COMPANY HEADER
 
+.company-first-box {
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 22px;
+  width: 1040px;
+}
+
+  // LEFT SIDE:
+
+    #company-photo {
+      width: 600px;
+      height: 300px;
+      margin-right: 22px;
+      background-color: pink;
+    }
+
+    #company-photo > img {
+      width: 600px;
+      height: 300px; 
+    }
+
+  // RIGHT SIDE:
+
+    .company-contact-box {
+      float: right;
+      width: 40%;
+      background-color: $white;
+    }
+
+    #company-details {
+      width: 90%;
+      margin: auto;
+    }
+
+    #company-name {
+      margin-top: 10px;
+      font-family: $roboto-slab;
+      font-weight: normal;
+      font-size: 1.75em;
+      line-height: $magic;
+      border-bottom: 1px solid $placeholder-grey;
+    }
+
+    #company-details > p {
+      margin: 20px 0px;
+
+      font-family: $raleway;
+      font-size: 1.25em;
+      border-bottom: 1px solid $placeholder-grey;
+    }
+
+// BELOW COMPANY HEADER
+
+  .company-second-box {
+    display: flex;
+    margin: auto;
+    margin-top: 22px;
+    margin-bottom: 30px;
+    width: 1040px;
+  }
+
+// NOTIFICATIONS
+
+  #company-notifications {
+    width: 600px;
+    margin-right: 22px;
+
+    background-color: $white;
+  }
+
+  #company-notifications-header {
+    width: 100%;
+    padding: 1px;
+    padding-left: 10px;
+
+    font-family: $roboto-slab;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: $magic;
+
+    background-color: pink;
+  }
+
+  // EMPLOYEES
+
+  #company-employees {
+    float: right;
+    width: 40%;
+
+    background-color: $white;
+  }
+
+  #employees-header {
+    width: 100%;
+    padding: 1px;
+    padding-left: 10px;
+
+    font-family: $roboto-slab;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: $magic;
+
+    background-color: pink;
+  }
+
+
+// TABLET STYLES
+//
 @media(max-width: 1024px) and (min-width: 426px) {
 
 
