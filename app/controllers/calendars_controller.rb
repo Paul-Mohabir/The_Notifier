@@ -31,14 +31,18 @@ class CalendarsController < ApplicationController
   def create
     @calendar = Calendar.new(calendar_params)
     @calendar.company_id = current_user.company_id
-    respond_to do |format|
-      if @calendar.save
-        format.html { redirect_to @calendar, notice: 'Calendar was successfully created.' }
-        format.json { render :show, status: :created, location: @calendar }
-      else
-        format.html { render :new }
-        format.json { render json: @calendar.errors, status: :unprocessable_entity }
+    if current_user.admin == true
+      respond_to do |format|
+        if @calendar.save
+          format.html { redirect_to @calendar, notice: 'Calendar was successfully created.' }
+          format.json { render :show, status: :created, location: @calendar }
+        else
+          format.html { render :new }
+          format.json { render json: @calendar.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to @calendar, notice: "You do not have permission to create shifts"
     end
   end
 
