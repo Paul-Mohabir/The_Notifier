@@ -1,10 +1,6 @@
-<div class="company-box">
+<!-- HEADER BOX -->
 
-  <div class="company-info">
-
-    <div id="company-header">
-      <h1> <%= @company.name %> </h1>
-    </div>
+  <div class="company-first-box">
 
     <div id="company-photo">
       <% if @company.picture %>
@@ -14,24 +10,34 @@
       <% end %>
     </div>
 
-    <%= link_to 'Edit', edit_company_path(@company) %>
-
-  </div>
-
-  <div class="company-list-box">
-
-    <div id="company-nav">
-      <ul>
-        <li id="updates-button"> <h1> Updates </h1> </li>
-        <li id="employees-button"> <h1> Employees </h1> </li>
-      </ul>
-    </div>
-
-    <div class="employees-list">
-      <%= render "employees" %>
+    <div class="company-contact-box">
+      <div id="company-details">
+        <h2 id="company-name"> <%= @company.name %> </h2>
+        <p> <%= @company.location %> </p>
+        <p> <%= @company.contact_info %> </p>
+        <p> <%= link_to 'Edit', edit_company_path(@company) %> </p>
+      </div>
     </div>
 
   </div>
 
+  <div class="company-second-box">
+    <div id="company-notifications">
+      <div id="company-notifications-header">
+        <h2> Notifications </h2>
+      </div>
+      <div>
+        <%= render "notifications" %>
+      </div>
+    </div>
 
-</div>
+    <div id="company-employees">
+      <div id="employees-header">
+        <h2> Employees </h2>
+      </div>
+      <div id="employees-partial">
+        <%= render "employees" %>
+      </div>
+    </div>
+
+  </div>
