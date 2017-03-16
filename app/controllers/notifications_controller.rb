@@ -15,7 +15,9 @@ class NotificationsController < ApplicationController
   end
 
   def create
-
+    # line 18 is going throught the hash which is the params and then going through the nested hashes through notification
+    recipient = User.find(params["notification"]["recipient_id"])
+    messaged = params["notification"]["message"]
     @notification = Notification.new(notification_params)
     @notification.author_id = current_user.id
     @notification.company_id = current_user.company_id
@@ -24,8 +26,8 @@ class NotificationsController < ApplicationController
       @client = Twilio::REST::Client.new ENV["account_sid"], ENV["auth_token"]
       @client.messages.create(
       from: '+16475590258',
-      to: '+16476181300',
-      body: 'Hey there!'
+      to: recipient.phone,
+      body: "#{messaged}"
       )
       redirect_to notifications_path
     else
