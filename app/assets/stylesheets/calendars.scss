@@ -2,6 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Desktop styles:
+
+.calendar-box {
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 22px;
+  width: 1040px;
+
+}
+
+.calendar-desktop {
+  float: left;
+  width: 650px;
+  margin-right: 22px;
+}
+
+.calendar-shift-box {
+  float: right;
+  width: 35%;
+
+  background-color: pink;
+}
+
+// admin box
+
+.calendar-admin-box {
+  margin: auto;
+  margin-top: 22px; 
+  margin-bottom: 30px;
+  width: 1040px;
+  padding: 5px;
+
+  background-color: $light-blue;
+}
+
+
+
+
 table {
   border-collapse: collapse;
 }
@@ -24,6 +63,8 @@ th, td {
   background-color: white;
 }
 .calendar-full {
+  display: inline-block;
+  padding: 5px;
   background-color: $light-green;
 }
 
@@ -31,6 +72,9 @@ th, td {
 .calendar-mobile {
   display: none;
 }
+
+
+
 
 @media(max-width: 425px){
   .calendar-desktop {

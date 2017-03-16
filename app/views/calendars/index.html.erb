@@ -1,27 +1,41 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Schedule</h1>
+<div class="calendar-box">
 
-<div class="calendar-desktop">
-  <div class="calendar-full">
-    <h2><%= link_to 'New Shift', new_calendar_path %></h2>
-    <%= month_calendar events: @calendars do |date, meetings| %>
-      <div class= 'calendar_day'>
-      <strong><%= date.mday %></strong>
+  <div class="calendar-desktop">
 
-        <% meetings.each do |shift| %>
-          <% if shift.company_id == current_user.company_id %>
-            <div class="">
-              <%= shift.name %>
-              <%= shift.company_id %>
-            </div>
+    <div class="calendar-full">
+
+      <%= month_calendar events: @calendars do |date, meetings| %>
+
+        <div class= 'calendar_day'>
+
+        <strong><%= date.mday %></strong>
+          <% meetings.each do |shift| %>
+            <% if shift.company_id == current_user.company_id %>
+              <div class="">
+                <%= shift.name %>
+                <%= shift.company_id %>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
 
-      </div>
-    <% end %>
+        </div>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="calendar-shift-box">
 
   </div>
+
+</div>
+
+<div class="calendar-admin-box">
+  <h2>
+    <%= link_to 'New Shift', new_calendar_path %>
+  </h2>
 </div>
 
 <!-- MOBILE CALENDAR -->
@@ -42,3 +56,5 @@
     </div>
   </div>
 </div>
+
+<!-- New Shift/Admin box -->

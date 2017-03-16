@@ -1,9 +1,11 @@
 .footer {
   width: 100%;
   margin: auto;
+  margin-top: 50px; 
+  padding: 10px;
 
-  font-family: 'Raleway', serif;
-  font-size: 0.5em;
+  font-family: $raleway;
+  font-size: 1em;
   color: #333;
   text-align: center;
 }
