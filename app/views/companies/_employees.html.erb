@@ -3,8 +3,14 @@
   <% @company.users.each do |user| %>
 
     <div id="company-employee">
-      <h1><%= user.name %></h1>
-      <p><%= user.phone %></p>
+      <div id="company-employee-name">
+        <h1><%= user.name %></h1>
+      </div>
+
+      <div id="company-employee-info">
+        <p><%= user.phone %></p>
+      </div>
+
     </div>
 
   <% end %>
