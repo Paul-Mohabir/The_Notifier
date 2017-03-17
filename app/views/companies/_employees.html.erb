@@ -3,12 +3,22 @@
   <% @company.users.each do |user| %>
 
     <div id="company-employee">
-      <div id="company-employee-name">
-        <h1><%= user.name %></h1>
+
+      <div id="company-employee-photo">
+        <% if user.user_photo %>
+          <%= image_tag user.user_photo %>
+        <% else %>
+          <%= image_tag ActionController::Base.helpers.asset_path("user_placeholder.png") %>
+        <% end %>
       </div>
 
-      <div id="company-employee-info">
-        <p><%= user.phone %></p>
+      <div id="company-employee-details">
+        <div id="company-employee-name">
+          <h1><%= user.name %></h1>
+        </div>
+        <div id="company-employee-info">
+          <p><%= user.phone %></p>
+        </div>
       </div>
 
     </div>
