@@ -15,6 +15,13 @@ class CalendarsController < ApplicationController
   # GET /calendars/1.json
   def show
 
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @calendar, except: %i(created_at updated_at)
+      end
+    end
+
   end
 
   # GET /calendars/new
@@ -72,12 +79,17 @@ class CalendarsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_calendar
-      @calendar = Calendar.find(params[:id])
-    end
+  def set_calendar
+    @calendar = Calendar.find(params[:id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def calendar_params
-      params.require(:calendar).permit(:name, :start_time, :end_time)
-    end
+  def calendar_params
+    params.require(:calendar).permit(:name, :start_time, :end_time)
+  end
+
+  def load_calendar
+    @calendar = Calendar.find(params[:id])
+  end
+
 end

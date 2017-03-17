@@ -4,6 +4,15 @@
 
 // Desktop styles:
 
+.calendar-header {
+  margin: auto;
+  margin-top: 30px;
+  width: 1040px;
+  padding: 5px;
+
+  background-color: $light-green;
+}
+
 .calendar-box {
   display: flex;
   margin: auto;
@@ -16,21 +25,39 @@
 .calendar-desktop {
   float: left;
   width: 650px;
-  margin-right: 22px;
+  margin-right: 25px;
 }
+
+// Shift details box:
 
 .calendar-shift-box {
   float: right;
   width: 35%;
 
+  background-color: white;
+}
+
+#shift-box-header {
+  margin: auto;
+  width: 100%;
+  padding: 1px;
+
+  text-align: center;
   background-color: pink;
+}
+
+#shift-details {
+  margin: auto;
+  width: 95%;
+
+  background-color: $placeholder-grey; 
 }
 
 // admin box
 
 .calendar-admin-box {
   margin: auto;
-  margin-top: 22px; 
+  margin-top: 22px;
   margin-bottom: 30px;
   width: 1040px;
   padding: 5px;
