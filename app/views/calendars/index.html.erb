@@ -2,7 +2,6 @@
   <h1> My Calendar </h1>
 </div>
 
-
 <div class="calendar-box">
 
   <div class="calendar-desktop">
@@ -11,15 +10,20 @@
 
       <%= month_calendar events: @calendars do |date, meetings| %>
 
-        <div class= 'calendar_day'>
+        <div class='calendar-day'>
 
-        <strong><%= date.mday %></strong>
+          <div id="date-number">
+            <strong><%= date.mday %></strong>
+          </div>
+
           <% meetings.each do |shift| %>
             <% if shift.company_id == current_user.company_id %>
+
               <div class="shift-entry">
                 <%= link_to shift.name, calendar_url(Calendar.find_by(params[:id])) %>
                 <%= shift.company_id %>
               </div>
+
             <% end %>
           <% end %>
 
@@ -61,7 +65,7 @@
         <strong><%= date.mday %></strong>
           <% meetings.each do |shift| %>
             <div class="">
-              <%= shift.name %>
+              <%= link_to shift.name, calendar_url(Calendar.find_by(params[:id])) %>
               <%= shift.start_time.hour %>
             </div>
           <% end %>

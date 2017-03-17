@@ -6,11 +6,72 @@
   padding: 5px;
 
   text-align: center;
-
 }
 
 .calendar-title {
   font-family: $roboto-slab;
   font-size: 1.5em;
-  margin: 0px 75px; 
+  margin: 0px 75px;
+}
+
+// Table header (Days Row)
+
+th {
+  text-align: center;
+  border: 1px solid black;
+  background-color: $light-green;
+}
+
+#day {
+  margin: auto;
+  margin-top: 5px;
+  width: 75px;
+
+  font-family: $roboto-slab;
+  font-size: 1.5em
+}
+
+// Table boxes (ie. each cell/day):
+
+td {
+  width: 80px;
+  height: 75px;
+  padding: 0px;
+
+  border: 1px solid black;
+  background-color: white;
+}
+
+.calendar-day {
+  width: 90px;
+  height: 100%;
+  padding: 0px;
+}
+
+#date-number {
+  display: block;
+  width: 95%;
+  margin: auto;
+  padding-left: 3px;
+
+  font-family: $roboto-slab;
+  font-size: 0.85em;
+  border-bottom: 1px solid $placeholder-grey;
+}
+
+.shift-entry {
+  padding: 3px;
+
+  font-family: $raleway;
+  font-size: 1em;
+}
+
+// Styles for Weekends + Dates not in month:
+
+.wday-0, .wday-6 {
+  background-color: $placeholder-light-grey;
+}
+
+.prev-month, .next-month {
+  background-color: $placeholder-grey;
 }
