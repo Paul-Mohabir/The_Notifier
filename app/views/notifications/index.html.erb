@@ -1,34 +1,43 @@
+<div id="notifications-header">
+  <h1> Notifications Center </h1>
+</div>
 
-<div class="notification-box">
+<div class="notifications-container">
 
-  <div id="notifications-header">
-    <h1> My Notifications </h1>
+  <!-- Left side -->
+
+  <div class="index">
+
+    <div id="index-header">
+      <h2>
+        My Inbox
+      </h2>
+    </div>
+
+    <div id="notifications-count">
+      <h3>
+        <%= @notifications.count %> notifications
+      </h3>
+    </div>
+
+      <% @notifications.reverse_each do |notification| %>
+
+        <% if notification.company_id == current_user.company_id %>
+          <div class="index-notification">
+            <h3>
+              <%= notification.title %>
+            </h3>
+          </div>
+        <% end %>
+
+      <% end %>
+
   </div>
 
-  <div id="notifications-number">
+  <!-- Right side -->
+
+  <div class="message-container">
+
   </div>
-
-  <div id="notification">
-
-    <% @notifications.reverse_each do |notification| %>
-      <% if notification.company_id == current_user.company_id %>
-      <div id="notification-title">
-        <h1> <% notification.title %> </h1>
-      </div>
-      <h4 class="author-box"> <%= notification.author && notification.author.name %> </h4>
-      <h4 class="company-box"> <%= notification.company && notification.company.name %> </h4>
-      <h4 class="recepient-box"> <%= User.find(notification.recipient_id).name %> </h4>
-      <p class="message-box">
-        <strong><%= notification.title %> </strong><br>
-
-        <!--if @current_user.company_id = Notification.  -->
-        <%= notification.message %>
-      </p>
-      <br>
-    <% end %>
-    <% end %>
-  </div>
-
-  <%= link_to 'New Notification', new_notification_path %>
 
 </div>

@@ -2,27 +2,82 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#notification-header{
-  font-family: $roboto-slab;
-  font-size: 1em;
-  color: white;
-  background-color: $dark-green;
-  padding: 5px;
-}
+// Desktop styles:
 
-.notification-box {
+.notifications-container {
+  display: flex;
   margin: auto;
-  margin-top: 15px;
-  width: 90%;
-  background-color: white;
+  margin-top: 30px;
+  width: 1040px;
 }
 
 #notifications-header{
+  width: 1040px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  padding: 1px;
+  padding-left: 10px;
+
+
   font-family: $roboto-slab;
   font-size: 1em;
   color: white;
   background-color: $dark-green;
 }
+
+// left side:
+
+.index {
+  width: 425px;
+  background-color: white;
+}
+
+#index-header {
+  padding: 1px;
+  padding-left: 10px;
+  width: 100%;
+
+  font-family: $roboto-slab;
+  font-size: 1em;
+  color: white;
+  background-color: $dark-blue;
+}
+
+#notifications-count {
+  padding: 1px;
+  padding-left: 10px;
+
+  font-family: $raleway;
+  color: white;
+  background-color: $light-blue;
+}
+
+#notifications-count > h3 {
+  margin: 5px 0px;
+}
+
+.index-notification {
+  margin: auto;
+  width: 95%;
+  padding-left: 5px;
+
+  font-family: $roboto-slab;
+  font-size: 0.85em;
+  border-bottom: 1px solid $placeholder-grey;
+}
+
+// Right side:
+
+.message-container {
+  float: right;
+  width: 615px;
+
+  background-color: $placeholder-light-grey;
+}
+
+
+
 
 #notifications-number {
   font-family: $raleway;
@@ -40,6 +95,13 @@
   font-size: 1em;
 }
 
+
+
+
+
+
+
+
 // MEDIA QUERIES
 
 
@@ -53,11 +115,6 @@
   }
 
   #notifications-header{
-    padding: 1px;
-    padding-left: 20px;
-  }
-
-  #notifications-number {
     padding: 1px;
     padding-left: 20px;
   }
