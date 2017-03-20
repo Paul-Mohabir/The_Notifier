@@ -18,7 +18,7 @@ User.create!(
   name:  "Mr.Snrub",
   email: "Montyburns@snpp.com",
   company_id: Company.all.sample.id,
-  address: "fake street",
+  address: "220 king street west Toronto Ontario",
   phone: "939 - 555 9034",
   emergency_contact: "Waylon Smithers",
   shift_preference: "Morning",
