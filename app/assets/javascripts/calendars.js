@@ -1,6 +1,7 @@
 // Javascript functions for Calendar page goes here:
 
 $(document).ready(function() {
+  console.log("Calendar script loaded");
 
 // AJAX request for shift details function:
 
@@ -12,7 +13,7 @@ $(document).ready(function() {
         url: url,
         method: 'GET',
         dataType: 'json'
-      }).done(function(data){
+      }).done(function(data) {
         console.log("sending ajax request");
         var shiftContainer = $('<div>');
         $('<h3>').html(data.name).appendTo(shiftContainer);
