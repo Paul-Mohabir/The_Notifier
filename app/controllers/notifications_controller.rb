@@ -7,7 +7,14 @@ class NotificationsController < ApplicationController
   end
 
   def show
-    @notification = Notification.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @notification, except: %i(updated_at)
+      end
+    end
+
   end
 
   def new
@@ -42,6 +49,10 @@ class NotificationsController < ApplicationController
   end
 
   private
+
+  def load_notification
+    @notification = Notification.find(params[:id])
+  end
 
   def notification_params
     params.require(:notification).permit(:author_id, :recipient_id, :company_id, :title, :message)
