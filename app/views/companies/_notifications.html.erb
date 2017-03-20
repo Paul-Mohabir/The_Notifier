@@ -1,6 +1,6 @@
 <% if @company.notifications.count != 0 %>
 
-  <% @company.notifications.each do |notification| %>
+  <% @company.notifications.reverse_each do |notification| %>
 
     <div id="company-notification">
       <div id="company-notification-title">

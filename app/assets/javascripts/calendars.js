@@ -8,6 +8,7 @@ $(document).ready(function() {
   $(function() {
     $('.shift-entry > a').on('click', function(event) {
       event.preventDefault();
+      $('#shift-notification').css('display', 'inline-block');
       var url = $(this).attr('href');
       $.ajax({
         url: url,
@@ -15,11 +16,9 @@ $(document).ready(function() {
         dataType: 'json'
       }).done(function(data) {
         console.log("sending ajax request");
-        var shiftContainer = $('<div>');
-        $('<h3>').html(data.name).appendTo(shiftContainer);
-        $('<p>').html(data.start_time).appendTo(shiftContainer);
-        $('<p>').html(data.end_time).appendTo(shiftContainer);
-        $('#shift-details').html(shiftContainer);
+          $('#shift-title').html(data.name);
+          $('#start-time').html(data.start_time);
+          $('#end-time').html(data.end_time);
       }).fail(function() {
         console.log("ajax request failed");
         $('#shift-details').html("Shift not found!");

@@ -25,7 +25,7 @@
         <% if notification.company_id == current_user.company_id %>
           <div class="index-notification">
             <h3 id="notification-title">
-              <%= link_to notification.title, notification_url(Notification.find_by(params[:id]))%>
+              <%= link_to notification.title, notification_url(notification)%>
             </h3>
           </div>
         <% end %>
