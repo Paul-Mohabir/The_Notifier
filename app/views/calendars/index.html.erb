@@ -21,7 +21,7 @@
 
               <div class="shift-entry">
                 <%= link_to shift.name, calendar_url(Calendar.find_by(params[:id])) %>
-                <%= shift.company_id %>
+                <%= shift.start_time.hour %>
               </div>
 
             <% end %>
