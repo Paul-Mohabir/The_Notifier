@@ -8,7 +8,7 @@
       <% else %>
         <%= image_tag ActionController::Base.helpers.asset_path("company_placeholder.png") %>
       <% end %>
-      
+
     </div>
 
     <div class="company-contact-box">
@@ -35,13 +35,13 @@
     <div id="map"></div>
    <script>
      function initMap() {
-       var uluru = {lat: -25.363, lng: 131.044};
+       var longandlat = {lat: -56.103, lng: 106.334};
        var map = new google.maps.Map(document.getElementById('map'), {
          zoom: 4,
-         center: uluru
+         center: longandlat
        });
        var marker = new google.maps.Marker({
-         position: uluru,
+         position: longandlat,
          map: map
        });
      }
