@@ -1,61 +1,59 @@
 
+  <div id="dashboard-header">
+    <h1> My Dashboard </h1>
+  </div>
+
   <div class="user-box">
+    <div class="user-left-container">
+      <div id="user-photo">
+        <% if @user.user_photo %>
+          <%= image_tag @user.user_photo %>
+        <% else %>
+          <%= image_tag ActionController::Base.helpers.asset_path("user_placeholder.png") %>
+        <% end %>
+      </div>
 
-    <div id="dashboard-header">
-      <h1> My Dashboard </h1>
-    </div>
-
-    <div id="user-photo">
-      <% if @user.user_photo %>
-        <%= image_tag @user.user_photo %>
-      <% else %>
-        <%= image_tag ActionController::Base.helpers.asset_path("user_placeholder.png") %>
-      <% end %> 
-    </div>
-
-    <div class="user-info-container">
-      <div id="user-name">
-        <h2> <%= @user.name %> </h2>
-          <%= (Company.find_by(id: @user.company_id)).name %>
+      <div class="user-info-container">
+        <div id="user-name">
+          <h2> <%= @user.name %> </h2>
+            <%= (Company.find_by(id: @user.company_id)).name %>
+        </div>
       </div>
     </div>
 
-    <div id="user-info-header">
-      <h2> Contact Info </h2>
-    </div>
-
-    <div class="user-info-container">
-      <div>
-        <%= @user.email %>
+    <div class="user-right-container">
+      <div id="user-info-header">
+        <h2> Contact Info </h2>
       </div>
-      <div>
-        <%= @user.address %>
-      </div>
-      <div>
-        <%= @user.phone %>
-      </div>
-      <div>
-        <%= @user.emergency_contact %>
-      </div>
-        <!-- <%= @user.shift_preference %> -->
-    </div>
 
-    <div id="user-edit-header">
-      <%= link_to 'Edit', edit_user_path(@user) %>
-    </div>
-
-    <div id="user-info-header">
-      <h2> Work Preferences </h2>
-    </div>
-
-    <div class="user-info-container">
-      <div>
-        <%= @user.shift_preference %>
+      <div class="user-info-container">
+        <div id="user-detail-field">
+          <%= @user.email %>
+        </div>
+        <div id="user-detail-field">
+          <%= @user.address %>
+        </div>
+        <div id="user-detail-field">
+          <%= @user.phone %>
+        </div>
+        <div id="user-detail-field">
+          <%= @user.emergency_contact %>
+        </div>
       </div>
-    </div>
 
-    <div id="user-edit-header">
-      <%= link_to 'Edit', edit_user_path(@user) %>
+      <div id="user-info-header">
+        <h2> Work Preferences </h2>
+      </div>
+
+      <div class="user-info-container">
+        <div id="user-detail-field">
+          <%= @user.shift_preference %>
+        </div>
+      </div>
+
+      <div id="user-edit-header">
+        <%= link_to 'Edit', edit_user_path(@user) %>
+      </div>
     </div>
 
   </div>

@@ -2,25 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.new-user-container {
-  margin-top: 60px;
-}
-
 .user-box {
+  display: flex;
   margin: auto;
-  margin-top: 15px;
-  width: 90%;
-  background-color: white;
+  width: 1040px;
 }
 
 #dashboard-header {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  width: 1040px;
   padding: 1px;
-  padding-left: 20px;
+  padding-left: 10px;
 
   font-family: $roboto-slab;
   font-size: 1em;
   color: white;
   background-color: $dark-green;
+}
+
+// left side:
+
+.user-left-container {
+  width: 40%;
+  margin-right: 25px;
+  text-align: center;
+  background-color: white;
+}
+
+#user-photo {
+  padding-top: 30px;
+}
+
+#user-photo img {
+  width: 250px;
+  height: 250px;
+}
+
+// right side:
+
+.user-right-container {
+  float: right;
+  width: 600px;
 }
 
 #user-info-header {
@@ -33,10 +57,12 @@
   background-color: $dark-green;
 }
 
+#user-detail-field {
+  background-color: white; 
+}
+
 .user-info-container > div {
   padding: 10px 20px;
-  border-bottom: 1px solid $placeholder-grey;
-
   font-family: $raleway;
   line-height: $magic;
 }

@@ -6,25 +6,24 @@
 
 #company-employee {
   margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 95%;
   height: 100px;
 
   background-color: $white;
+  border-bottom: 1px solid $placeholder-grey;
 }
+
 
 // Employee picture:
 
 #company-employee-photo {
-  box-sizing: content-box;
   display: inline-block;
+
   float: left;
-  margin: 5px 0px 0px 5px; 
   height: 90px;
 }
 
 #company-employee-photo > img {
+  box-sizing: content-box;
   max-width: 90px;
   max-height: 90px;
   border-radius: 25%;
@@ -58,6 +57,10 @@
   text-align: justify;
   font-family: $raleway;
   line-height: $magic;
+}
+
+#company-employee-info p {
+  margin: auto;
 }
 
 // Tablet:

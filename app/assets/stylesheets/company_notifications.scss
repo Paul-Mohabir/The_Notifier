@@ -3,12 +3,9 @@
 // Desktop:
 
 #company-notification {
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 95%;
-
+  padding: 10px 0px;
   background-color: $white;
+  border-bottom: 1px solid $placeholder-light-grey;
 }
 
 #company-notification-title {
