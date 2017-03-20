@@ -40,7 +40,9 @@
     <div class="message-controls">
       <ul id="message-nav">
         <li>
-          <h2> New Notification </h2>
+          <h2>
+            <%= link_to 'New Notification', new_notification_path %>
+          </h2>
         </li>
       </ul>
     </div>
@@ -69,6 +71,11 @@
       </p>
     </div>
 
+    <div class="empty-message">
+      <h2>
+        Please select a message to view details
+      </h2>
+    </div>
   </div>
 
 </div>

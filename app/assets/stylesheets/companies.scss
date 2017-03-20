@@ -13,7 +13,7 @@
   display: flex;
   margin: auto;
   margin-top: 30px;
-  margin-bottom: 22px;
+  margin-bottom: 50px;
   width: 1040px;
 }
 
@@ -22,7 +22,6 @@
     #company-photo {
       width: 600px;
       height: 300px;
-      margin-right: 22px;
       background-color: pink;
     }
 
@@ -35,7 +34,7 @@
 
     .company-contact-box {
       float: right;
-      width: 40%;
+      width: 438px;
       background-color: $white;
     }
 
@@ -58,7 +57,6 @@
 
       font-family: $raleway;
       font-size: 1.25em;
-      border-bottom: 1px solid $placeholder-grey;
     }
 
 // BELOW COMPANY HEADER
@@ -127,5 +125,68 @@
 
 @media(max-width: 425px) {
 
+  .company-first-box {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+  }
+
+  // left side:
+
+  #company-photo {
+    width: 100%;
+  }
+
+  #company-photo img {
+    width: 100%;
+  }
+
+  // right side:
+
+  .company-contact-box {
+    float: none;
+    width: 100%;
+    margin: auto;
+  }
+
+  #company-details {
+    width: 100%;
+    padding-bottom: 1px;
+  }
+
+  #company-name {
+    width: 100%;
+    margin: auto;
+    padding: 5px 0px;
+
+    text-align: center;
+    background-color: $light-green;
+  }
+
+  #company-details p {
+    padding-left: 10px;
+  }
+
+  // second box:
+
+  .company-second-box {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+  }
+
+  // company notifications:
+
+  #company-notifications {
+    width: 100%;
+    margin: auto;
+  }
+
+  // company employees:
+
+  #company-employees {
+    width: 100%;
+    margin: auto;
+  }
 
 }
