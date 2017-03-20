@@ -8,7 +8,7 @@ end
 
 
 
-ruby '2.3.3'
+ruby '2.3.1'
 
 
 gem 'twilio-ruby'
