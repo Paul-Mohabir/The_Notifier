@@ -13,6 +13,14 @@ class NotificationsController < ApplicationController
       format.json do
         render json: @notification, except: %i(updated_at)
       end
+      @notification = Notification.find(params[:id])
+ if @notification.recipient_id == current_user.id
+   @notification.update_attributes(:read_at => Time.now)
+ end
+ respond_to do |format|
+   format.html # show.html.erb
+   format.xml  { render :xml => @notification }
+ end
     end
 
   end
