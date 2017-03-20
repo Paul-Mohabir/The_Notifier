@@ -7,7 +7,7 @@ class NotificationsController < ApplicationController
   end
 
   def show
-
+    @notification = Notification.find(params[:id])
     respond_to do |format|
       format.html
       format.json do
