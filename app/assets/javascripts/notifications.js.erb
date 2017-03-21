@@ -8,6 +8,7 @@ $(document).ready(function() {
   $(function() {
     $('#notification-title > a').on('click', function(event) {
       event.preventDefault();
+      $('.empty-message').css('display', 'none');
       $('.message-title-box').css('display', 'inline-block');
       $('.message-author-box').css('display', 'inline-block');
       $('.message-body').css('display', 'inline-block');
@@ -21,7 +22,7 @@ $(document).ready(function() {
           $('#message-title').html(data.title);
           $('#message-sent-at').html(data.created_at);
           $('#message-author').html("From: " + data.author_id);
-          $('#message-recipient').html(data.recipient_id);
+          $('#message-recipient').html("To: " + data.recipient_id);
           $('#message-text').html(data.message);
        }).fail(function() {
          console.log("ajax request failed");
