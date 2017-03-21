@@ -162,16 +162,8 @@
 
   text-align: center;
   font-family: $raleway;
-  color: grey; 
+  color: grey;
 }
-
-
-
-
-
-
-
-
 
 
 // MEDIA QUERIES
@@ -186,9 +178,38 @@
     background-color: white;
   }
 
+  .notifications-container {
+    display: inline-block;
+    margin-top: 0px;
+    width: 100%;
+  }
+
   #notifications-header{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+
     padding: 1px;
     padding-left: 20px;
+  }
+
+  // index styles:
+
+  .index {
+    margin: auto;
+    width: 100%;
+    border-bottom: 10px solid $light-blue;
+  }
+
+// message styles:
+
+  .message-container {
+    float: none;
+    width: 100%;
+  }
+
+  .message-controls {
+    display: none;
   }
 
   #notification-title {
@@ -205,6 +226,11 @@
 
   #notification-author {
     padding: 1px;
+  }
+
+  .empty-message {
+    margin: 0px;
+    padding: 40px 0px; 
   }
 
 }
