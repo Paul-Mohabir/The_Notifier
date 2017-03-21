@@ -58,7 +58,7 @@
 }
 
 #user-detail-field {
-  background-color: white; 
+  background-color: white;
 }
 
 .user-info-container > div {
@@ -80,98 +80,32 @@
 
 @media(max-width: 1024px) and (min-width: 426px) {
 
-  .user-box {
-    margin: auto;
-    margin-top: 15px;
-    width: 90%;
-    background-color: white;
-  }
-
-  #dashboard-header {
-    padding: 1px;
-    padding-left: 20px;
-
-    font-family: $roboto-slab;
-    font-size: 1em;
-    color: white;
-    background-color: $dark-green;
-  }
-
-  #user-info-header {
-    padding: 1px;
-    padding-left: 20px;
-
-    font-family: $roboto-slab;
-    font-size: 0.85em;
-    color: white;
-    background-color: $dark-green;
-  }
-
-  .user-info-container > div {
-    padding: 10px 20px;
-    border-bottom: 1px solid $placeholder-grey;
-
-    font-family: $raleway;
-    line-height: $magic;
-  }
-
-  #user-edit-header {
-    padding: 5px 20px;
-    background-color: $light-green;
-  }
-
-  .user-edit-header > a {
-
-  }
 
 }
 
-// Mobile Styles
+// Mobile Styles:
 
 @media(max-width: 425px) {
 
-  .user-list {
-    margin: auto;
-    margin-top: 15px;
-    width: 80%;
-    background-color: white;
-  }
-
   #dashboard-header {
-    padding: 1px;
-    padding-left: 20px;
-
-    font-family: $roboto-slab;
-    font-size: 1em;
-    color: white;
-    background-color: $dark-green;
+    margin: auto;
+    width: 100%;
   }
 
-  #user-info-header {
-    padding: 1px;
-    padding-left: 20px;
-
-    font-family: $roboto-slab;
-    font-size: 0.85em;
-    color: white;
-    background-color: $dark-green;
+  .user-box {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
   }
 
-  .user-info-container > div {
-    padding: 10px 20px;
-    border-bottom: 1px solid $placeholder-grey;
-
-    font-family: $raleway;
-    line-height: $magic;
+  .user-left-container {
+    margin: auto;
+    width: 100%;
   }
 
-  #user-edit-header {
-    padding: 5px 20px;
-    background-color: $light-green;
-  }
-
-  .user-edit-header > a {
-
+  .user-right-container {
+    margin: auto;
+    width: 100%; 
   }
 
 }
