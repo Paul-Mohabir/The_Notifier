@@ -1,9 +1,9 @@
 /* HEADER STYLES: */
 
-header a, a:hover, a:visited {
-  text-decoration: none;
-  color: white;
-}
+// header > a, a:hover, a:visited {
+//   text-decoration: none;
+//   color: white;
+// }
 
 /* FULLSCREEN: */
 
@@ -136,7 +136,7 @@ header a, a:hover, a:visited {
     width: 75%;
     margin-left: 25%;
 
-    padding: 5px; 
+    padding: 5px;
     text-align: left;
     background-color: $light-green;
     text-align: center;
