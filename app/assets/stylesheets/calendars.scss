@@ -46,11 +46,30 @@
   background-color: pink;
 }
 
+#empty-shift {
+  margin-top: 150px;
+  text-align: center;
+
+  font-family: $raleway;
+  color: grey;
+}
+
 #shift-details {
   margin: auto;
-  width: 95%;
+}
 
-  background-color: $placeholder-grey;
+.shift-field {
+  display: none;
+  margin: auto;
+  width: 95%;
+  padding-left: 10px;
+
+  font-family: $raleway; 
+  border-bottom: 1px solid $placeholder-grey;
+}
+
+#shift-title {
+  font-family: $roboto-slab;
 }
 
 #shift-notification {

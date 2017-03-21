@@ -1,0 +1,100 @@
+// Styles for the mobile calendar go here:
+
+@media(max-width: 425px) {
+
+  .calendar-box {
+    display: none;
+    margin: auto;
+    width: 100%;
+  }
+
+// headers:
+
+  .calendar-header {
+    display: none;
+    width: 100%;
+  }
+
+  .calendar-admin-box {
+    display: none;
+    width: 100%;
+  }
+
+  .mobile-header {
+    padding: 1px;
+    padding-left: 10px;
+    margin: auto;
+    background-color: $light-green;
+  }
+
+  .mobile-header h2 {
+
+  }
+
+  // week calendar:
+
+  .week-calendar {
+    background-color: $dark-green;
+  }
+
+  .calendar-heading {
+    padding: 10px;
+    color: white;
+
+    background-color: $light-blue;
+  }
+
+  .calendar-title {
+    margin: 0px 10px;
+  }
+
+  table {
+    width: 100%;
+    border: none;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid $placeholder-grey;
+  }
+
+  #week-calendar-dates {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 100%;
+
+    text-align: center;
+    background-color: $light-green;
+  }
+
+  #week-calendar-dates > h3 {
+    width: 100%;
+    padding-top: 10px;
+
+    color: white;
+    transform: rotate(-90deg);
+  }
+
+  .calendar-day {
+    width: 100%;
+    padding-left: 30px;
+
+  }
+
+  #date-number {
+    margin: auto;
+    width: 95%;
+    padding-top: 5px;
+
+
+    font-family: $roboto-slab;
+    font-size: 1em;
+    border-bottom: 1px solid $placeholder-grey;
+  }
+
+  .shift-entry {
+    padding-left: 10px; 
+  }
+
+}

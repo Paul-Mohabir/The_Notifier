@@ -8,6 +8,8 @@ $(document).ready(function() {
   $(function() {
     $('.shift-entry > a').on('click', function(event) {
       event.preventDefault();
+      $('#empty-shift').css('display', 'none');
+      $('.shift-field').css('display', 'block');
       $('#shift-notification').css('display', 'inline-block');
       var url = $(this).attr('href');
       $.ajax({
@@ -17,8 +19,8 @@ $(document).ready(function() {
       }).done(function(data) {
         console.log("sending ajax request");
           $('#shift-title').html(data.name);
-          $('#start-time').html(data.start_time);
-          $('#end-time').html(data.end_time);
+          $('#start-time').html("Start: " + data.start_time);
+          $('#end-time').html("End: " + data.end_time);
       }).fail(function() {
         console.log("ajax request failed");
         $('#shift-details').html("Shift not found!");

@@ -38,6 +38,9 @@
 #user-photo img {
   width: 250px;
   height: 250px;
+
+  border-radius: 25%;
+  border: 2px solid $placeholder-grey;
 }
 
 // right side:
@@ -103,9 +106,25 @@
     width: 100%;
   }
 
+  #user-photo img {
+    width: 150px;
+    height: 150px; 
+
+    border-radius: 25%;
+    border: 2px solid $placeholder-grey;
+  }
+
+  #user-name {
+    padding: none;
+  }
+
+  #user-name h2 {
+    margin: 5px 0px;
+  }
+
   .user-right-container {
     margin: auto;
-    width: 100%; 
+    width: 100%;
   }
 
 }
