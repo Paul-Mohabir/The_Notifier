@@ -64,7 +64,7 @@
   width: 95%;
   padding-left: 10px;
 
-  font-family: $raleway; 
+  font-family: $raleway;
   border-bottom: 1px solid $placeholder-grey;
 }
 
@@ -99,6 +99,9 @@
   display: none;
 }
 
+.mobile-shift-box {
+  display: none;
+}
 
 
 
@@ -118,6 +121,10 @@
   .calendar-mobile td {
     display: block;
     width: 100%;
+  }
+
+  .mobile-shift-box {
+    display: block;
   }
 
 }

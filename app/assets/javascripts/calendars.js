@@ -3,6 +3,17 @@
 $(document).ready(function() {
   console.log("Calendar script loaded");
 
+// Jquery toggle for mobile styles:
+
+  $(function() {
+    $('.mobile-calendar-header').click(function() {
+      $('.week-calendar').toggle(1000);
+    });
+  });
+
+
+
+
 // AJAX request for shift details function:
 
   $(function() {

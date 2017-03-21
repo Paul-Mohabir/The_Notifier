@@ -20,20 +20,28 @@
     width: 100%;
   }
 
-  .mobile-header {
+  .mobile-calendar-header {
     padding: 1px;
-    padding-left: 10px;
     margin: auto;
+
+    text-align: center;
     background-color: $light-green;
   }
 
-  .mobile-header h2 {
+  .mobile-calendar-header > h2 {
+    font-family: $roboto-slab;
+    color: white;
+  }
 
+  .mobile-calendar-header > h3 {
+    font-family: $roboto-slab;
+    color: white;
   }
 
   // week calendar:
 
   .week-calendar {
+    display: none;
     background-color: $dark-green;
   }
 
@@ -94,7 +102,16 @@
   }
 
   .shift-entry {
-    padding-left: 10px; 
+    padding-left: 10px;
   }
+
+  // Shift details box:
+
+  .calendar-shift-box {
+    margin: auto;
+    width: 100%;
+  }
+
+
 
 }

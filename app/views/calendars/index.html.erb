@@ -80,41 +80,64 @@
 
 <div class="calendar-mobile">
 
-  <div class="mobile-header">
+  <div class="mobile-calendar-header">
     <h2>
       My Calendar
     </h2>
     <h3>
-      Click to expand
+      click to expand
     </h3>
   </div>
 
   <div class="week-calendar">
 
     <%= week_calendar events: @calendars do |date, meetings| %>
-
       <div class='calendar-day'>
-
         <div id="date-number">
           <%= date.mday %>
         </div>
-
         <% meetings.each do |shift| %>
-
           <div class="shift-entry">
             <%= link_to shift.name, calendar_url(Calendar.find_by(params[:id])) %>
             <%= shift.start_time.hour %>
           </div>
-
         <% end %>
-
       <% end %>
-
     </div>
-
   </div>
 
+  <div class="calendar-shift-box mobile-shift-box">
+
+    <div id="shift-box-header">
+      <h2> Shift Details </h2>
+    </div>
+
+    <div id="empty-shift">
+      <h2>
+        Select a shift to view details
+      </h2>
+    </div>
+
+    <div id="shift-details">
+      <div class="shift-field">
+        <h2 id="shift-title">
+          <!-- user name goes here -->
+        </h2>
+      </div>
+      <div class="shift-field">
+        <h3 id="start-time">
+          <!-- shift start time goes here -->
+        </h3>
+      </div>
+      <div class="shift-field">
+        <h3 id="end-time">
+          <!-- calendar.end_time -->
+        </h3>
+      </div>
+    </div>
+  </div>
 
 </div>
+
 
 <!-- New Shift/Admin box -->
