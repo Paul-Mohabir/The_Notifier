@@ -122,7 +122,7 @@
     width: 100%;
     padding: 10px;
 
-    background-color: teal;
+    background-color: grey;
   }
 
   #info-header {
@@ -139,7 +139,7 @@
   }
 
   .info-box:nth-child(2n+0) {
-    background-color: magenta;
+    background-color: $placeholder-light-grey;
   }
 
 }
