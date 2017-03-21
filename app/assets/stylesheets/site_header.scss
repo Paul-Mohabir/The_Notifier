@@ -2,7 +2,7 @@
 
 header a, a:hover, a:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 /* FULLSCREEN: */
@@ -19,7 +19,10 @@ header a, a:hover, a:visited {
   font-size: 1.50em;
   line-height: 0px;
   color: white;
+  border-bottom: 5px solid $light-green;
+
   background-color: $dark-green;
+
 }
 
 /*-------------------------------*/
@@ -31,6 +34,7 @@ header a, a:hover, a:visited {
   width: 100%;
   z-index: 99;
 
+  border-bottom: 5px solid $light-green;
   background-color: $dark-green;
 }
 
@@ -46,6 +50,10 @@ header a, a:hover, a:visited {
 
   font-family: $raleway;
   color: white;
+}
+
+#nav-name-display {
+  background-color: $light-green;
 }
 
 #nav-mobile-menu {
@@ -88,11 +96,13 @@ header a, a:hover, a:visited {
     font-size: 1.25em;
     padding: 5px 20px;
     height: 50px;
+    border-bottom: none;
   }
 
   .navbar {
     position: fixed;
     height: 60px;
+    border-bottom: none;
   }
 
   #nav-fullscreen-link {
@@ -113,18 +123,23 @@ header a, a:hover, a:visited {
   .drop-down {
     display: none;
     position: fixed;
-    right: 0;
+    float: right;
     top: 60px;
   }
 
   .drop-down ul {
     margin-right: 0px;
+
   }
 
   .drop-down li {
-    width: 100%;
+    width: 75%;
+    margin-left: 25%;
+
+    padding: 5px; 
     text-align: left;
     background-color: $light-green;
+    text-align: center;
   }
 
 }

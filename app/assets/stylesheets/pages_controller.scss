@@ -7,7 +7,6 @@
 .landing {
   padding: 100px 0px;
   width: 100%;
-  background-color: white;
 }
 
 .splash-container {
@@ -19,12 +18,12 @@
   margin: auto;
   width: 70%;
   padding: 20px;
+  text-align: center;
   background-color: grey;
 }
 
 .blurb-box h1 {
   font-family: 'Roboto Slab', serif;
-  text-align: center;
 }
 
 .blurb-box p {
@@ -33,6 +32,8 @@
 }
 
 .button-box {
+  display: none;
+
   margin: auto;
   margin-top: 20px;
   text-align: center;
@@ -44,8 +45,11 @@
 
 .info-box {
   width: 100%;
+  padding: 20px;
   margin: auto;
   text-align: center;
+
+  background-color: grey;
 }
 
 // LINK STYLES
@@ -61,6 +65,10 @@
 .button-box a, a:hover, a:visited {
   text-decoration: none;
   color: black;
+}
+
+.info-box:nth-child(2n+0) {
+  background-color: $placeholder-light-grey;
 }
 
 // MOBILE

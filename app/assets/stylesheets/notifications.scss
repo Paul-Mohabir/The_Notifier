@@ -166,6 +166,10 @@
 }
 
 
+.mobile-new-notification {
+  display: none;
+}
+
 // MEDIA QUERIES
 
 
@@ -230,7 +234,17 @@
 
   .empty-message {
     margin: 0px;
-    padding: 40px 0px; 
+    padding: 40px 0px;
+  }
+
+  .mobile-new-notification {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+
+    text-align: center;
+    font-family: $roboto-slab;
+    background-color: pink; 
   }
 
 }
