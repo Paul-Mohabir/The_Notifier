@@ -14,7 +14,7 @@
 
   </head>
 
-  <header>
+  <div class="header">
 
     <div id="logo">
       <h1> notify! </h1>
@@ -24,7 +24,7 @@
 
     <div class="navbar">
       <% if current_user %>
-        <ul>
+        <ul class="nav-menu">
           <li id="nav-fullscreen-link"> <%= link_to 'Company Home', company_path(current_user.company_id) %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'My Dashboard', user_path(current_user) %> </li>
           <li id="nav-fullscreen-link"> <%= link_to 'My Notifications', notifications_url %> </li>
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-  </header>
+  </div>
 
   <% flash.each do |key, message| %>
     <div class="flash-<%= key %>">

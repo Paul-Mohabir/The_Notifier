@@ -88,7 +88,9 @@
     font-size: 1em;
     line-height: $magic;
 
-    background-color: pink;
+    color: white;
+    background-color: $dark-blue;
+    border-bottom: 5px solid $light-blue;
   }
 
   // EMPLOYEES
@@ -108,8 +110,10 @@
     font-weight: normal;
     font-size: 1em;
     line-height: $magic;
+    color: white;
 
-    background-color: pink;
+    background-color: $dark-blue;
+    border-bottom: 5px solid $light-blue;
   }
 
 
@@ -158,8 +162,10 @@
     margin: auto;
     padding: 5px 0px;
 
+    color: white;
     text-align: center;
-    background-color: $light-green;
+    background-color: $dark-green;
+    border-bottom: 5px solid $light-green;
   }
 
   #company-details p {

@@ -10,7 +10,9 @@
   width: 1040px;
   padding: 5px;
 
-  background-color: $light-green;
+  font-family: $roboto-slab;
+  color: white;
+  background-color: $dark-green;
 }
 
 .calendar-box {
@@ -85,7 +87,9 @@
   width: 1040px;
   padding: 5px;
 
-  background-color: $light-blue;
+  font-family: $roboto-slab;
+  color: white;
+  background-color: $dark-blue;
 }
 
 .calendar-full {
