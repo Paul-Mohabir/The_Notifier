@@ -1,9 +1,15 @@
 /* HEADER STYLES: */
 
+<<<<<<< HEAD
+.header > a, a:hover, a:visited {
+  text-decoration: none;
+}
+=======
 // header > a, a:hover, a:visited {
 //   text-decoration: none;
 //   color: white;
 // }
+>>>>>>> 1826dba8795f12c0eb677004e1e95a2063460e2d
 
 /* FULLSCREEN: */
 
@@ -50,6 +56,10 @@
 
   font-family: $raleway;
   color: white;
+}
+
+.nav-menu > a, a:hover, a:visited {
+  color: white; 
 }
 
 #nav-name-display {

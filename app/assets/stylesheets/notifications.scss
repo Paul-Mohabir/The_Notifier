@@ -4,6 +4,11 @@
 
 // Desktop styles:
 
+#notification-title > a, a:hover, a:visited {
+  color: black; 
+}
+
+
 .notifications-container {
   display: flex;
   margin: auto;
@@ -244,7 +249,7 @@
 
     text-align: center;
     font-family: $roboto-slab;
-    background-color: pink; 
+    background-color: pink;
   }
 
 }
